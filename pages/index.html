@@ -43,11 +43,13 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html"><i class="fa-solid fa-house me-1"></i>Inicio</a>
+                            <a class="nav-link active" href="index.html"><i
+                                    class="fa-solid fa-house me-1"></i>Inicio</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="dashboard.html"><i class="fa-solid fa-chart-line me-1"></i>Dashboard</a>
+                            <a class="nav-link" href="dashboard.html"><i
+                                    class="fa-solid fa-chart-line me-1"></i>Dashboard</a>
                         </li>
 
                         <!-- DROPDOWN -->
@@ -72,7 +74,8 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-gear me-1"></i>Configuración</a>
+                            <a class="nav-link" href="configuracion/configuracion.html"><i
+                                    class="fa-solid fa-gear me-1"></i>Configuración</a>
                         </li>
 
                         <li class="nav-item">
@@ -100,8 +103,7 @@
 
             <!-- ENCABEZADO -->
             <div>
-                <div
-                    class="sidebar-heading p-4 fs-4 d-flex align-items-center justify-content-center">
+                <div class="sidebar-heading p-4 fs-4 d-flex align-items-center justify-content-center">
                     <span class="card-text">Menú</span>
                 </div>
 
@@ -280,133 +282,133 @@
             </div>
 
         </div>
+        <div class="page-content-wrapper">
+            <main class="container-fluid py-5 px-4" id="inicio-container">
 
-
-
-        <div class="container-fluid py-5 px-4" id="inicio-container">
-
-            <!-- SALUDO INICIAL AL USUARIO QUE HIZO "LOGGING" -->
-            <section class="text-center mb-5">
-                <h1 class="fw-bold display-5 text-primary mb-3">¡Bienvenido a <span class="text-dark">Asuras Col</span>!
-                </h1>
-                <p class="lead text-muted">
-                    Tu aliado digital para el control, gestión y seguimiento de inventarios médicos.
-                    Gestiona productos, proveedores y reportes desde un mismo entorno moderno y seguro.
-                </p>
-            </section>
-
-            <!-- INTRODUCCION Y BIENVENIDA AL SITIO [MANEJANDO USUARIO ESTATICO]-->
-            <section class="row justify-content-center mb-5">
-                <div class="col-lg-8">
-                    <div class="card border-0 shadow-sm bg-light p-4">
-                        <div class="card-body text-center">
-                            <i class="fa-solid fa-heart-pulse fa-3x text-danger mb-3"></i>
-                            <h4 class="fw-bold mb-3">Gestión inteligente de medicamentos</h4>
-                            <p class="text-muted">
-                                En <strong>Asuras Col</strong> buscamos simplificar tus procesos.
-                                Aquí podrás registrar productos, supervisar entradas y salidas, generar alertas, y crear
-                                reportes automáticos
-                                sin complicaciones.
-                            </p>
-                            <a href="#" class="btn btn-primary mt-3">
-                                <i class="fa-solid fa-arrow-right-to-bracket me-1"></i> Ir al Dashboard
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ACCESOS RÁPIDOS A MÓDULOS MAS IMPORTANTES DEL APLICATIVO, MAS INFORMACION EN DASHBOARD.HTML -->
-            <section class="row text-center g-4 mb-5">
-                <div class="col-md-3">
-                    <div class="card border-0 shadow-sm h-100 hover-card">
-                        <div class="card-body">
-                            <i class="fa-solid fa-boxes-stacked fa-2x text-primary mb-3"></i>
-                            <h5 class="fw-bold">Inventario</h5>
-                            <p class="text-muted small">Registra y controla todos tus productos médicos.</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">Entrar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card border-0 shadow-sm h-100 hover-card">
-                        <div class="card-body">
-                            <i class="fa-solid fa-truck fa-2x text-info mb-3"></i>
-                            <h5 class="fw-bold">Proveedores</h5>
-                            <p class="text-muted small">Consulta y gestiona tus distribuidores activos.</p>
-                            <a href="#" class="btn btn-outline-info btn-sm text-dark">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card border-0 shadow-sm h-100 hover-card">
-                        <div class="card-body">
-                            <i class="fa-solid fa-bell fa-2x text-warning mb-3"></i>
-                            <h5 class="fw-bold">Alertas</h5>
-                            <p class="text-muted small">Supervisa productos por vencer o con bajo stock.</p>
-                            <a href="#" class="btn btn-outline-warning btn-sm">Ver alertas</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card border-0 shadow-sm h-100 hover-card">
-                        <div class="card-body">
-                            <i class="fa-solid fa-chart-line fa-2x text-success mb-3"></i>
-                            <h5 class="fw-bold">Reportes</h5>
-                            <p class="text-muted small">Visualiza estadísticas generales del inventario.</p>
-                            <a href="#" class="btn btn-outline-success btn-sm">Ver reportes</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- BLOQUE DE INFORMACIÓN Y MISIÓN DE LA APLICACION Y RELACION CON MEDIC-COLOMBIA -->
-            <section class="row align-items-center my-5">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <!-- PROXIMANENTE IMPLEMENTACION DE IMAGEN DE VISTA PREVIA DEL SISTEMA FINAL -->
-                    <img src="assets/img/dashboard_preview.png" alt="Vista previa del sistema"
-                        class="img-fluid rounded shadow-sm">
-                </div>
-                <div class="col-md-6">
-                    <h3 class="fw-bold mb-3"><i class="fa-solid fa-circle-info me-2 text-primary"></i>Sobre Asuras Col
-                    </h3>
-                    <p class="text-muted mb-4">
-                        Este sistema fue diseñado para brindar control total del inventario de medicamentos y
-                        dispositivos médicos.
-                        Su interfaz combina simplicidad y precisión, pensada para mejorar los flujos de trabajo y la
-                        trazabilidad de los procesos.
+                <!-- SALUDO INICIAL AL USUARIO QUE HIZO "LOGGING" -->
+                <section class="text-center mb-5">
+                    <h1 class="fw-bold display-5 text-primary mb-3">¡Bienvenido a <span class="text-dark">Asuras
+                            Col</span>!
+                    </h1>
+                    <p class="lead text-muted">
+                        Tu aliado digital para el control, gestión y seguimiento de inventarios médicos.
+                        Gestiona productos, proveedores y reportes desde un mismo entorno moderno y seguro.
                     </p>
-                    <!-- ALGUNAS FUNCIONALIDADES INDTRODUCTORIAS -->
-                    <ul class="list-unstyled text-muted small">
-                        <li>✔ Registro rápido de productos</li>
-                        <li>✔ Alertas automáticas de vencimiento</li>
-                        <li>✔ Reportes y análisis exportables</li>
-                        <li>✔ Gestión integral de proveedores</li>
-                    </ul>
-                </div>
-            </section>
+                </section>
 
-            <!-- BLOQUE FINAL DEL CONTENIDO PRINCIPAL, CIERRE DEL SALUDO Y FRASES COMERCIALES -->
-            <section class="text-center bg-dark text-white rounded py-5 mt-5 shadow-sm">
-                <h2 class="fw-bold mb-3">“Control y confianza en cada registro”</h2>
-                <p class="text-white-50 mb-4">
-                    Mantén tu inventario bajo control y optimiza la administración de tus recursos médicos.
-                </p>
-                <a href="#" class="btn btn-outline-light btn-lg">
-                    <i class="fa-solid fa-rocket me-2"></i>Comenzar ahora
-                </a>
-            </section>
+                <!-- INTRODUCCION Y BIENVENIDA AL SITIO [MANEJANDO USUARIO ESTATICO]-->
+                <section class="row justify-content-center mb-5">
+                    <div class="col-lg-8">
+                        <div class="card border-0 shadow-sm bg-light p-4">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-heart-pulse fa-3x text-danger mb-3"></i>
+                                <h4 class="fw-bold mb-3">Gestión inteligente de medicamentos</h4>
+                                <p class="text-muted">
+                                    En <strong>Asuras Col</strong> buscamos simplificar tus procesos.
+                                    Aquí podrás registrar productos, supervisar entradas y salidas, generar alertas, y
+                                    crear
+                                    reportes automáticos
+                                    sin complicaciones.
+                                </p>
+                                <a href="#" class="btn btn-primary mt-3">
+                                    <i class="fa-solid fa-arrow-right-to-bracket me-1"></i> Ir al Dashboard
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
+                <!-- ACCESOS RÁPIDOS A MÓDULOS MAS IMPORTANTES DEL APLICATIVO, MAS INFORMACION EN DASHBOARD.HTML -->
+                <section class="row text-center g-4 mb-5">
+                    <div class="col-md-3">
+                        <div class="card border-0 shadow-sm h-100 hover-card">
+                            <div class="card-body">
+                                <i class="fa-solid fa-boxes-stacked fa-2x text-primary mb-3"></i>
+                                <h5 class="fw-bold">Inventario</h5>
+                                <p class="text-muted small">Registra y controla todos tus productos médicos.</p>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Entrar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card border-0 shadow-sm h-100 hover-card">
+                            <div class="card-body">
+                                <i class="fa-solid fa-truck fa-2x text-info mb-3"></i>
+                                <h5 class="fw-bold">Proveedores</h5>
+                                <p class="text-muted small">Consulta y gestiona tus distribuidores activos.</p>
+                                <a href="#" class="btn btn-outline-info btn-sm text-dark">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card border-0 shadow-sm h-100 hover-card">
+                            <div class="card-body">
+                                <i class="fa-solid fa-bell fa-2x text-warning mb-3"></i>
+                                <h5 class="fw-bold">Alertas</h5>
+                                <p class="text-muted small">Supervisa productos por vencer o con bajo stock.</p>
+                                <a href="#" class="btn btn-outline-warning btn-sm">Ver alertas</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card border-0 shadow-sm h-100 hover-card">
+                            <div class="card-body">
+                                <i class="fa-solid fa-chart-line fa-2x text-success mb-3"></i>
+                                <h5 class="fw-bold">Reportes</h5>
+                                <p class="text-muted small">Visualiza estadísticas generales del inventario.</p>
+                                <a href="#" class="btn btn-outline-success btn-sm">Ver reportes</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BLOQUE DE INFORMACIÓN Y MISIÓN DE LA APLICACION Y RELACION CON MEDIC-COLOMBIA -->
+                <section class="row align-items-center my-5">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <!-- PROXIMANENTE IMPLEMENTACION DE IMAGEN DE VISTA PREVIA DEL SISTEMA FINAL -->
+                        <img src="assets/img/dashboard_preview.png" alt="Vista previa del sistema"
+                            class="img-fluid rounded shadow-sm">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="fw-bold mb-3"><i class="fa-solid fa-circle-info me-2 text-primary"></i>Sobre Asuras
+                            Col
+                        </h3>
+                        <p class="text-muted mb-4">
+                            Este sistema fue diseñado para brindar control total del inventario de medicamentos y
+                            dispositivos médicos.
+                            Su interfaz combina simplicidad y precisión, pensada para mejorar los flujos de trabajo y la
+                            trazabilidad de los procesos.
+                        </p>
+                        <!-- ALGUNAS FUNCIONALIDADES INDTRODUCTORIAS -->
+                        <ul class="list-unstyled text-muted small">
+                            <li>✔ Registro rápido de productos</li>
+                            <li>✔ Alertas automáticas de vencimiento</li>
+                            <li>✔ Reportes y análisis exportables</li>
+                            <li>✔ Gestión integral de proveedores</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- BLOQUE FINAL DEL CONTENIDO PRINCIPAL, CIERRE DEL SALUDO Y FRASES COMERCIALES -->
+                <section class="text-center bg-dark text-white rounded py-5 mt-5 shadow-sm">
+                    <h2 class="fw-bold mb-3">“Control y confianza en cada registro”</h2>
+                    <p class="text-white-50 mb-4">
+                        Mantén tu inventario bajo control y optimiza la administración de tus recursos médicos.
+                    </p>
+                    <a href="dashboard.html" class="btn btn-outline-light btn-lg">
+                        <i class="fa-solid fa-rocket me-2"></i>Comenzar ahora
+                    </a>
+                </section>
+
+            </main>
         </div>
-
     </div>
 
     <!-- FOOTER DE LA PAGINA, CIERRE Y FINAL -->
-
-    <footer class="bg-light pt-5 border-top" style="border-top-color: #686767 !important;">
+    <footer class="bg-dark pt-5 border-top text-white" style="border-top-color: #686767 !important;">
         <div class="container">
             <div class="row pb-4">
 
@@ -414,7 +416,7 @@
 
                 <div class="col-12 col-md-4 mb-4 mb-md-0">
                     <h5 class="fw-bold mb-3">Contacto Rápido</h5>
-                    <p class="text-muted small">
+                    <p class="text-white-50 small">
                         Suscríbete para recibir notificaciones o envíanos un mensaje corto.
                     </p>
                     <form action="#" class="d-grid gap-2">
@@ -427,7 +429,7 @@
 
                 <div class="col-12 col-md-4 mb-4 mb-md-0">
                     <h5 class="fw-bold mb-3">Sobre Nosotros</h5>
-                    <p class="text-muted">
+                    <p class="text-white-50">
                         Somos una empresa dedicada a ofrecer soluciones digitales. Nuestro compromiso es la
                         innovación y la calidad en el servicio.
                     </p>
@@ -439,18 +441,20 @@
                 <div class="col-12 col-md-4 mb-4 mb-md-0">
                     <h5 class="fw-bold mb-3">Recursos</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-muted">Preguntas Frecuentes</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted">Política de Privacidad</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted">Términos de Servicio</a></li>
-                        <li><a href="#" class="text-decoration-none text-muted">Trabaja con Nosotros</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Términos de Servicio</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Trabaja con Nosotros</a></li>
                     </ul>
 
                     <!-- REDES SOCIALES -->
 
                     <div class="mt-4">
                         <h6 class="fw-bold">Síguenos:</h6>
-                        <span class="fs-5 me-3">🌐</span>
-                        <span class="fs-5 me-3">💬</span>
+                        <span class="fs-5 me-3"><i class="fa-brands fa-linkedin"></i></span>
+                        <span class="fs-5 me-3"><i class="fa-brands fa-instagram"></i></span>
+                        <span class="fs-5 me-3"><i class="fa-brands fa-behance"></i></span>
+                        <span class="fs-5 me-3"><i class="fa-brands fa-square-facebook"></i></span>
                     </div>
                 </div>
             </div>
@@ -459,7 +463,7 @@
 
             <div class="row pt-3 border-top">
                 <div class="col-12 text-center text-md-start">
-                    <p class="text-muted small mb-0">
+                    <p class="text-white-50 small mb-0">
                         &copy; 2025 Nombre de la Empresa. Todos los derechos reservados.
                     </p>
                 </div>
