@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/menu.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <header role="banner">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container-fluid">
+
+                <!-- LOGO + NOMBRE DE LA APLICACIÓN -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="assets/img/logo.png" alt="Logo" style="max-height:40px;" class="me-2">
+                    <span class="fw-bold">Asuras Col</span>
+                </a>
+
+                <!-- BOTÓN DE TOGGLER (sidebar y colapso general [menu lateral]) -->
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-outline-light me-2" id="sidebarToggle" title="Mostrar menú lateral">
+                        <i class="fa-solid fa-list-ul"></i>
+                    </button>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- CONTENIDO NAV -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html"><i
+                                    class="fa-solid fa-house me-1"></i>Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html"><i
+                                    class="fa-solid fa-chart-line me-1"></i>Dashboard</a>
+                        </li>
+
+                        <!-- DROPDOWN -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInventario" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-boxes-stacked me-1"></i>Inventario
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownInventario">
+                                <li><a class="dropdown-item" href="#">Ver productos</a></li>
+                                <li><a class="dropdown-item" href="#">Entradas</a></li>
+                                <li><a class="dropdown-item" href="#">Salidas</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Reportes</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-user me-1"></i>Perfil</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-gear me-1"></i>Configuración</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="#"><i
+                                    class="fa-solid fa-right-from-bracket me-1"></i>Cerrar sesión</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- BÚSQUEDA -->
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="d-flex" id="wrapper">
+
+        <!-- SIDEBAR -->
+        <div class="bg-dark text-white border-end d-flex flex-column justify-content-between" id="sidebar-wrapper"
+            style="min-height:100vh;">
+
+            <!-- ENCABEZADO -->
+            <div>
+                <div class="sidebar-heading p-4 fs-4 d-flex align-items-center justify-content-center">
+                    <span class="card-text">Menú</span>
+                </div>
+
+                <!-- CONTENIDO PRINCIPAL -->
+                <div class="list-group list-group-flush">
+
+                    <!-- INVENTARIO -->
+                    <a href="#collapseInventario" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false"
+                        aria-controls="collapseInventario">
+                        <i class="fa-solid fa-box me-2"></i> Inventario
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapseInventario">
+                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
+                            Inventario</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Registrar
+                            Producto</a>
+
+                        <a href="#collapseMovimientos"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0"
+                            data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseMovimientos">
+                            Movimientos
+                            <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                        </a>
+                        <div class="collapse ms-3" id="collapseMovimientos">
+                            <a href="#"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Entradas</a>
+                            <a href="#"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Salidas</a>
+                            <a href="#"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ajustes</a>
+                        </div>
+
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Vencimientos
+                            y Alertas</a>
+
+                        <a href="#collapseReportesInv"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0"
+                            data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseReportesInv">
+                            Reportes rápidos
+                            <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                        </a>
+                        <div class="collapse ms-3" id="collapseReportesInv">
+                            <a href="#"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Stock</a>
+                            <a href="#"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Vencidos</a>
+                            <a href="#"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Movimientos</a>
+                        </div>
+                    </div>
+
+                    <!-- PROVEEDORES -->
+                    <a href="#collapseProveedores" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false"
+                        aria-controls="collapseProveedores">
+                        <i class="fa-solid fa-truck me-2"></i> Proveedores
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapseProveedores">
+                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
+                            Proveedores</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Registrar
+                            Nuevo</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Historial
+                            de
+                            Entregas</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Reportes</a>
+                    </div>
+
+                    <!-- ALERTAS -->
+                    <a href="#collapseAlertas" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseAlertas">
+                        <i class="fa-solid fa-bell me-2"></i> Alertas
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapseAlertas">
+                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
+                            Alertas</a>
+
+                        <a href="#collapseConfigAlertas"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0"
+                            data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseConfigAlertas">
+                            Configurar Reglas
+                            <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                        </a>
+                        <div class="collapse ms-3" id="collapseConfigAlertas">
+                            <a href="#"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Umbral
+                                de
+                                Stock</a>
+                            <a href="#"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Umbral
+                                de
+                                Vencimiento</a>
+                        </div>
+
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Alertas
+                            Manuales</a>
+                    </div>
+
+                    <!-- REPORTES -->
+                    <a href="#collapseReportes" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseReportes">
+                        <i class="fa-solid fa-chart-column me-2"></i> Reportes
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapseReportes">
+                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Stock
+                            General</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Productos
+                            Vencidos</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Entradas
+                            y
+                            Salidas</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Costos
+                            Totales</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Enviar
+                            Reportes</a>
+                    </div>
+
+                    <!-- USUARIOS Y ROLES -->
+                    <a href="#collapseUsuarios" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseUsuarios">
+                        <i class="fa-solid fa-users me-2"></i> Usuarios y Roles
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapseUsuarios">
+                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
+                            Usuarios</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Registrar
+                            Usuario</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Roles
+                            y Permisos</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Auditoría</a>
+                    </div>
+
+                    <!-- CONFIGURACIÓN -->
+                    <a href="#collapseConfig" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseConfig">
+                        <i class="bi bi-gear-fill me-2"></i> Configuración
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapseConfig">
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Parámetros
+                            del Sistema</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Respaldos</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Interfaz</a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Notificaciones</a>
+                    </div>
+
+                </div> <!-- /list-group -->
+            </div>
+
+            <!-- PIE CON LOGO Y SLOGAN -->
+            <div class="text-center mt-auto border-top border-secondary p-3 menu-img">
+                <img src="assets/img/logo.png" alt="Logo" class="img-fluid mb-2" style="max-width:80px;">
+                <p class="small text-secondary fst-italic m-0">“Control y confianza en cada registro”</p>
+            </div>
+        </div>
+
+       <div id="page-content-wrapper">
+            <div class="container-fluid p-4">
+
+                <!-- TITULO -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="fw-bold text-dark mb-0"><i class="fa-solid fa-chart-line me-2 text-primary"></i>Dashboard General</h2>
+                    <span class="text-muted small">Actualizado: 11 Oct 2025</span>
+                </div>
+
+                <!-- MÉTRICAS RÁPIDAS -->
+                <div class="row g-4 mb-5">
+                    <div class="col-md-3">
+                        <div class="card border-0 shadow-sm p-3">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-pills fa-2x text-primary mb-2"></i>
+                                <h5 class="fw-bold mb-1">Productos Totales</h5>
+                                <h2 class="fw-bolder text-dark">1280</h2>
+                                <p class="small text-muted">En stock actualmente</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-0 shadow-sm p-3">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-triangle-exclamation fa-2x text-warning mb-2"></i>
+                                <h5 class="fw-bold mb-1">Stock Bajo</h5>
+                                <h2 class="fw-bolder text-dark">46</h2>
+                                <p class="small text-muted">Productos críticos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-0 shadow-sm p-3">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-clock-rotate-left fa-2x text-danger mb-2"></i>
+                                <h5 class="fw-bold mb-1">Vencidos</h5>
+                                <h2 class="fw-bolder text-dark">12</h2>
+                                <p class="small text-muted">Revisión urgente</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-0 shadow-sm p-3">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-truck-field fa-2x text-success mb-2"></i>
+                                <h5 class="fw-bold mb-1">Proveedores Activos</h5>
+                                <h2 class="fw-bolder text-dark">18</h2>
+                                <p class="small text-muted">En operaciones</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRÁFICOS -->
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-6">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-header bg-white fw-bold"><i class="fa-solid fa-chart-pie me-2 text-primary"></i>Distribución de Stock</div>
+                            <div class="card-body text-center">
+                                <img src="../assets/img/inventory_status.jpg" alt="Gráfico de stock" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-header bg-white fw-bold"><i class="fa-solid fa-chart-line me-2 text-success"></i>Movimientos del Mes</div>
+                            <div class="card-body text-center">
+                                <img src="../assets/img/inventory_dashboard_it_transformation_at_workplace_ppt_themes_slide01.jpg" alt="Gráfico movimientos" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABLA DE MOVIMIENTOS RECIENTES -->
+                <div class="card shadow-sm border-0 mb-5">
+                    <div class="card-header bg-white fw-bold">
+                        <i class="fa-solid fa-clock me-2 text-secondary"></i>Últimos Movimientos de Inventario
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Tipo</th>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Responsable</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2025-10-10</td>
+                                    <td><span class="badge bg-success">Entrada</span></td>
+                                    <td>Amoxicilina 500mg</td>
+                                    <td>240</td>
+                                    <td>J. Pérez</td>
+                                </tr>
+                                <tr>
+                                    <td>2025-10-09</td>
+                                    <td><span class="badge bg-danger">Salida</span></td>
+                                    <td>Ibuprofeno 400mg</td>
+                                    <td>120</td>
+                                    <td>A. Rodríguez</td>
+                                </tr>
+                                <tr>
+                                    <td>2025-10-07</td>
+                                    <td><span class="badge bg-warning text-dark">Ajuste</span></td>
+                                    <td>Paracetamol 500mg</td>
+                                    <td>+30</td>
+                                    <td>C. Méndez</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- BLOQUE FINAL DE ANÁLISIS -->
+                <div class="alert alert-primary shadow-sm mb-4">
+                    <i class="fa-solid fa-lightbulb me-2"></i>
+                    <strong>Recomendación:</strong> Se sugiere revisar el stock de los productos con vencimiento próximo y generar un reporte antes del cierre del mes.
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- FOOTER DE LA PAGINA, CIERRE Y FINAL -->
+        <footer class="bg-light pt-5 border-top" style="border-top-color: #686767 !important;">
+            <div class="container">
+                <div class="row pb-4">
+
+                    <!-- CONTACTO RAPIDO CLIENTE-DESARROLLADOR -->
+
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                        <h5 class="fw-bold mb-3">Contacto Rápido</h5>
+                        <p class="text-muted small">
+                            Suscríbete para recibir notificaciones o envíanos un mensaje corto.
+                        </p>
+                        <form action="#" class="d-grid gap-2">
+                            <input type="email" class="form-control" placeholder="Tu correo">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+
+                    <!-- INFORMACION PERSONAL Y LABORAL -->
+
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                        <h5 class="fw-bold mb-3">Sobre Nosotros</h5>
+                        <p class="text-muted">
+                            Somos una empresa dedicada a ofrecer soluciones digitales. Nuestro compromiso es la
+                            innovación y la calidad en el servicio.
+                        </p>
+                        <a href="#" class="text-decoration-none d-block mt-3">Leer más...</a>
+                    </div>
+
+                    <!-- RECURSOS Y POLITICAS -->
+
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                        <h5 class="fw-bold mb-3">Recursos</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-muted">Preguntas Frecuentes</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Política de Privacidad</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Términos de Servicio</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Trabaja con Nosotros</a></li>
+                        </ul>
+
+                        <!-- REDES SOCIALES -->
+
+                        <div class="mt-4">
+                            <h6 class="fw-bold">Síguenos:</h6>
+                            <span class="fs-5 me-3">🌐</span>
+                            <span class="fs-5 me-3">💬</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DERECHOS RESERVADOS -->
+
+                <div class="row pt-3 border-top">
+                    <div class="col-12 text-center text-md-start">
+                        <p class="text-muted small mb-0">
+                            &copy; 2025 Nombre de la Empresa. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="../assets/js/menu.js"></script>
+</body>
+
+</html>

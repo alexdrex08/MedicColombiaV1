@@ -1,0 +1,31 @@
+       #sidebar-wrapper {
+            min-height: 100vh;
+            width: 250px;
+            /* Ancho expandido */
+            transition: all 0.3s ease-in-out;
+            flex-shrink: 0;
+            /* Asegura que la barra no se encoja */
+        }
+
+        /* 2. Definir el ancho de la barra lateral cuando la clase 'toggled' esté activa en el body */
+        body.toggled #sidebar-wrapper {
+            width: 70px;
+            /* Ancho colapsado */
+        }
+
+        /* 3. El contenido principal debe ocupar el resto del espacio */
+        #page-content-wrapper {
+            width: 100%;
+        }
+
+        /* Opcional: Estilo para los iconos en modo colapsado */
+        body.toggled #sidebar-wrapper .list-group .list-group-item{
+            display: none;
+        }
+        body.toggled #sidebar-wrapper .menu-img{
+            display: none;
+        }
+
+        body.toggled #sidebar-wrapper .sidebar-heading .card-text {
+            display: none;
+        }
