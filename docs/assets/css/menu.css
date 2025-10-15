@@ -7,6 +7,7 @@
             /* Asegura que la barra no se encoja */
         }
 
+
         /* 2. Definir el ancho de la barra lateral cuando la clase 'toggled' esté activa en el body */
         body.toggled #sidebar-wrapper {
             width: 70px;
