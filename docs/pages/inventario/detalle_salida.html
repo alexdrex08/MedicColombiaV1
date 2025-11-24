@@ -9,19 +9,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/menu.css">
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/menu.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <title>Detalle salida</title>
 </head>
 
 <body class="toggled">
+
     <header role="banner">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
             <div class="container-fluid">
-
                 <!-- LOGO + NOMBRE DE LA APLICACIÓN -->
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="../assets/img/logo_prototipo.png" alt="Logo" style="max-height:40px;" class="me-2">
+                    <img src="../../assets/img/logo_prototipo.png" alt="Logo" style="max-height:40px;" class="me-2">
                     <span class="fw-bold">Asuras Col</span>
                 </a>
 
@@ -43,11 +43,12 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li class="nav-item">
-                            <a class="nav-link " href="index.html"><i class="fa-solid fa-house me-1"></i>Inicio</a>
+                            <a class="nav-link active" href="../index.html"><i
+                                    class="fa-solid fa-house me-1"></i>Inicio</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="dashboard.html"><i
+                            <a class="nav-link" href="../dashboard.html"><i
                                     class="fa-solid fa-chart-line me-1"></i>Dashboard</a>
                         </li>
 
@@ -58,13 +59,13 @@
                                 <i class="fa-solid fa-boxes-stacked me-1"></i>Inventario
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownInventario">
-                                <li><a class="dropdown-item" href="inventario/inventario.html">Ver productos</a></li>
-                                <li><a class="dropdown-item" href="inventario/entradas.html">Entradas</a></li>
-                                <li><a class="dropdown-item" href="inventario/salidas.html">Salidas</a></li>
+                                <li><a class="dropdown-item" href="inventario.html">Ver productos</a></li>
+                                <li><a class="dropdown-item" href="entradas.html">Entradas</a></li>
+                                <li><a class="dropdown-item" href="salidas.html">Salidas</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="reporte/reportes.html">Reportes</a></li>
+                                <li><a class="dropdown-item" href="../reporte/reportes.html">Reportes</a></li>
                             </ul>
                         </li>
 
@@ -73,12 +74,12 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="configuracion/configuracion.html"><i
+                            <a class="nav-link" href="../configuracion/configuracion.html"><i
                                     class="fa-solid fa-gear me-1"></i>Configuración</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-danger" href="login.html"><i
+                            <a class="nav-link text-danger" href="../login.html"><i
                                     class="fa-solid fa-right-from-bracket me-1"></i>Cerrar sesión</a>
                         </li>
 
@@ -276,142 +277,171 @@
 
             <!-- PIE CON LOGO Y SLOGAN -->
             <div class="text-center mt-auto border-top border-secondary p-3 menu-img">
-                <img src="../assets/img/logo_prototipo.png" alt="Logo" class="img-fluid mb-2" style="max-width:80px;">
+                <img src="../../assets/img/logo_prototipo.png" alt="Logo" class="img-fluid mb-2"
+                    style="max-width:80px;">
                 <p class="small text-secondary fst-italic m-0">“Control y confianza en cada registro”</p>
             </div>
         </div>
 
+        <!-- CONTENIDO -->
         <div id="page-content-wrapper">
-            <main class="container-fluid p-4 my-5" id="inicio-container">
+            <main class="container-fluid p-4 my-5">
 
-                <!-- TITULO -->
+                <!-- ENCABEZADO -->
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2 class="fw-bold text-dark mb-0"><i class="fa-solid fa-chart-line me-2 text-primary"></i>Dashboard
-                        General</h2>
-                    <span class="text-muted small">Actualizado: 11 Oct 2025</span>
+                    <div>
+                        <h2 class="fw-bold mb-0">Detalle de Salida</h2>
+                        <p class="text-muted">Registro detallado de despacho o venta de productos</p>
+                    </div>
+
+                    <a href="salidas.html" class="btn btn-secondary">
+                        <i class="fa-solid fa-arrow-left me-2"></i> Volver
+                    </a>
                 </div>
 
-                <!-- MÉTRICAS RÁPIDAS -->
-                <div class="row g-4 mb-5">
+                
+                <div class="row g-4 mb-4">
+
                     <div class="col-md-3">
-                        <div class="card border-0 shadow-sm p-3">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-pills fa-2x text-primary mb-2"></i>
-                                <h5 class="fw-bold mb-1">Productos Totales</h5>
-                                <h2 class="fw-bolder text-dark">1280</h2>
-                                <p class="small text-muted">En stock actualmente</p>
-                            </div>
+                        <div class="card p-3 shadow-sm border-0 h-100">
+                            <h6 class="fw-bold">ID Salida</h6>
+                            <p class="fs-4 fw-bold text-danger">#S-1120</p>
                         </div>
                     </div>
+
                     <div class="col-md-3">
-                        <div class="card border-0 shadow-sm p-3">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-triangle-exclamation fa-2x text-warning mb-2"></i>
-                                <h5 class="fw-bold mb-1">Stock Bajo</h5>
-                                <h2 class="fw-bolder text-dark">46</h2>
-                                <p class="small text-muted">Productos críticos</p>
-                            </div>
+                        <div class="card p-3 shadow-sm border-0 h-100">
+                            <h6 class="fw-bold">Fecha de registro</h6>
+                            <p class="fs-5 fw-bold">2025-01-16</p>
                         </div>
                     </div>
+
                     <div class="col-md-3">
-                        <div class="card border-0 shadow-sm p-3">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-clock-rotate-left fa-2x text-danger mb-2"></i>
-                                <h5 class="fw-bold mb-1">Vencidos</h5>
-                                <h2 class="fw-bolder text-dark">12</h2>
-                                <p class="small text-muted">Revisión urgente</p>
-                            </div>
+                        <div class="card p-3 shadow-sm border-0 h-100">
+                            <h6 class="fw-bold">Responsable</h6>
+                            <p class="fw-bold text-muted">A. Rodríguez</p>
                         </div>
                     </div>
+
                     <div class="col-md-3">
-                        <div class="card border-0 shadow-sm p-3">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-truck-field fa-2x text-success mb-2"></i>
-                                <h5 class="fw-bold mb-1">Proveedores Activos</h5>
-                                <h2 class="fw-bolder text-dark">18</h2>
-                                <p class="small text-muted">En operaciones</p>
-                            </div>
+                        <div class="card p-3 shadow-sm border-0 h-100">
+                            <h6 class="fw-bold">Tipo de salida</h6>
+                            <span class="badge bg-danger px-3 py-2">Venta</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- GRÁFICOS -->
-                <div class="row g-4 mb-5">
-                    <div class="col-lg-6">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-header bg-white fw-bold"><i
-                                    class="fa-solid fa-chart-pie me-2 text-primary"></i>Distribución de Stock</div>
-                            <div class="card-body text-center">
-                                <img src="../assets/img/inventory_status.jpg" alt="Gráfico de stock"
-                                    class="img-fluid rounded">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-header bg-white fw-bold"><i
-                                    class="fa-solid fa-chart-line me-2 text-success"></i>Movimientos del Mes</div>
-                            <div class="card-body text-center">
-                                <img src="../assets/img/inventory_dashboard_it_transformation_at_workplace_ppt_themes_slide01.jpg"
-                                    alt="Gráfico movimientos" class="img-fluid rounded">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TABLA DE MOVIMIENTOS RECIENTES -->
-                <div class="card shadow-sm border-0 mb-5 dash-table">
+                
+                <div class="card mb-4 border-0 shadow-sm">
                     <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-clock me-2 text-secondary"></i>Últimos Movimientos de Inventario
+                        <i class="fa-solid fa-user me-2 text-secondary"></i> Información del Cliente
                     </div>
                     <div class="card-body">
+
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <p class="fw-bold mb-1">Cliente:</p>
+                                <p class="text-muted">Juan Pérez</p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <p class="fw-bold mb-1">Teléfono:</p>
+                                <p class="text-muted">312 555 9988</p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <p class="fw-bold mb-1">Correo:</p>
+                                <p class="text-muted">juanperez@example.com</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-header bg-white fw-bold">
+                        <i class="fa-solid fa-box-open me-2 text-secondary"></i> Productos retirados
+                    </div>
+                    <div class="card-body">
+
                         <table class="table table-hover align-middle">
                             <thead class="table-light">
                                 <tr>
-                                    <th>Fecha</th>
-                                    <th>Tipo</th>
                                     <th>Producto</th>
                                     <th>Cantidad</th>
-                                    <th>Responsable</th>
+                                    <th>Valor unitario</th>
+                                    <th>Subtotal</th>
                                 </tr>
                             </thead>
+
                             <tbody>
                                 <tr>
-                                    <td>2025-10-10</td>
-                                    <td><span class="badge bg-success">Entrada</span></td>
-                                    <td>Amoxicilina 500mg</td>
-                                    <td>240</td>
-                                    <td>J. Pérez</td>
-                                </tr>
-                                <tr>
-                                    <td>2025-10-09</td>
-                                    <td><span class="badge bg-danger">Salida</span></td>
                                     <td>Ibuprofeno 400mg</td>
                                     <td>120</td>
-                                    <td>A. Rodríguez</td>
+                                    <td>$ 1.200</td>
+                                    <td>$ 144.000</td>
                                 </tr>
+
                                 <tr>
-                                    <td>2025-10-07</td>
-                                    <td><span class="badge bg-warning text-dark">Ajuste</span></td>
-                                    <td>Paracetamol 500mg</td>
-                                    <td>+30</td>
-                                    <td>C. Méndez</td>
+                                    <td>Amoxicilina 500mg</td>
+                                    <td>40</td>
+                                    <td>$ 4.500</td>
+                                    <td>$ 180.000</td>
                                 </tr>
                             </tbody>
                         </table>
+
+                        <div class="text-end fw-bold fs-5 mt-3">
+                            Total salida: <span class="text-danger">$ 324.000</span>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- BLOQUE FINAL DE ANÁLISIS -->
-                <div class="alert alert-primary shadow-sm mb-4">
-                    <i class="fa-solid fa-lightbulb me-2"></i>
-                    <strong>Recomendación:</strong> Se sugiere revisar el stock de los productos con vencimiento próximo
-                    y generar un reporte antes del cierre del mes.
+                
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-header bg-white fw-bold">
+                        <i class="fa-solid fa-tag me-2 text-secondary"></i> Información del Movimiento
+                    </div>
+                    <div class="card-body">
+
+                        <p class="fw-bold mb-1">Motivo:</p>
+                        <p class="text-muted">Venta registrada en punto físico</p>
+
+                        <hr>
+
+                        <p class="fw-bold mb-1">Observaciones:</p>
+                        <p class="text-muted fst-italic">
+                            Se verificó la calidad del producto y fecha de vencimiento. Sin inconsistencias.
+                        </p>
+
+                    </div>
                 </div>
+
+                
+                <div class="card border-0 shadow-sm mb-5">
+                    <div class="card-header bg-white fw-bold">
+                        <i class="fa-solid fa-clock-rotate-left me-2 text-secondary"></i> Historial Relacionado
+                    </div>
+                    <div class="card-body">
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Última salida del mismo cliente → <strong>#S-1108</strong> (2025-01-10)
+                            </li>
+                            <li class="list-group-item">
+                                Productos asociados a esta salida han generado <strong>3 alertas de stock bajo</strong>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
             </main>
+
         </div>
     </div>
-    <!-- FOOTER DE LA PAGINA, CIERRE Y FINAL -->
     <footer class="bg-dark pt-5 border-top text-white" style="border-top-color: #686767 !important;">
         <div class="container">
             <div class="row pb-4">
@@ -477,7 +507,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="../assets/js/menu.js"></script>
+    <script src="../../assets/js/menu.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <script>
+        fetch("../plantillas/header.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("header-container").innerHTML = html);
+    </script>
+
+    <main class="content">
+        <h2>Editar Producto</h2>
+
+        <form id="editarForm">
+            <label>ID:</label>
+            <input type="text" id="id" disabled>
+
+            <label>Nombre:</label>
+            <input type="text" id="nombre">
+
+            <label>Cantidad:</label>
+            <input type="number" id="cantidad">
+
+            <label>Precio:</label>
+            <input type="number" id="precio">
+
+            <button type="submit">Guardar cambios</button>
+        </form>
+
+        <a href="ver_producto.html" class="btn btn-secondary">Cancelar</a>
+    </main>
+
+    <script>
+        const url = new URL(window.location.href);
+        const id = url.searchParams.get("id");
+
+        // Datos demo
+        const producto = {
+            id: "001",
+            nombre: "Producto ejemplo",
+            cantidad: 50,
+            precio: 100
+        };
+
+        document.getElementById("id").value = producto.id;
+        document.getElementById("nombre").value = producto.nombre;
+        document.getElementById("cantidad").value = producto.cantidad;
+        document.getElementById("precio").value = producto.precio;
+
+        document.getElementById("editarForm").addEventListener("submit", function(e){
+            e.preventDefault();
+            alert("Cambios guardados (demo)");
+        });
+    </script>
+
+</body>
+</html>

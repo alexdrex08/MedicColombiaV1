@@ -9,19 +9,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/menu.css">
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/menu.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <title>Salidas</title>
 </head>
 
 <body class="toggled">
+
     <header role="banner">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
             <div class="container-fluid">
-
                 <!-- LOGO + NOMBRE DE LA APLICACIÓN -->
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="../assets/img/logo_prototipo.png" alt="Logo" style="max-height:40px;" class="me-2">
+                    <img src="../../assets/img/logo_prototipo.png" alt="Logo" style="max-height:40px;" class="me-2">
                     <span class="fw-bold">Asuras Col</span>
                 </a>
 
@@ -43,11 +43,12 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li class="nav-item">
-                            <a class="nav-link " href="index.html"><i class="fa-solid fa-house me-1"></i>Inicio</a>
+                            <a class="nav-link" href="../index.html"><i
+                                    class="fa-solid fa-house me-1"></i>Inicio</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="dashboard.html"><i
+                            <a class="nav-link" href="../dashboard.html"><i
                                     class="fa-solid fa-chart-line me-1"></i>Dashboard</a>
                         </li>
 
@@ -58,13 +59,13 @@
                                 <i class="fa-solid fa-boxes-stacked me-1"></i>Inventario
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownInventario">
-                                <li><a class="dropdown-item" href="inventario/inventario.html">Ver productos</a></li>
-                                <li><a class="dropdown-item" href="inventario/entradas.html">Entradas</a></li>
-                                <li><a class="dropdown-item" href="inventario/salidas.html">Salidas</a></li>
+                                <li><a class="dropdown-item" href="inventario.html">Ver productos</a></li>
+                                <li><a class="dropdown-item" href="entradas.html">Entradas</a></li>
+                                <li><a class="dropdown-item active" href="salidas.html">Salidas</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="reporte/reportes.html">Reportes</a></li>
+                                <li><a class="dropdown-item" href="../reporte/reportes.html">Reportes</a></li>
                             </ul>
                         </li>
 
@@ -73,12 +74,12 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="configuracion/configuracion.html"><i
+                            <a class="nav-link" href="../configuracion/configuracion.html"><i
                                     class="fa-solid fa-gear me-1"></i>Configuración</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-danger" href="login.html"><i
+                            <a class="nav-link text-danger" href="../login.html"><i
                                     class="fa-solid fa-right-from-bracket me-1"></i>Cerrar sesión</a>
                         </li>
 
@@ -276,208 +277,293 @@
 
             <!-- PIE CON LOGO Y SLOGAN -->
             <div class="text-center mt-auto border-top border-secondary p-3 menu-img">
-                <img src="../assets/img/logo_prototipo.png" alt="Logo" class="img-fluid mb-2" style="max-width:80px;">
+                <img src="../../assets/img/logo_prototipo.png" alt="Logo" class="img-fluid mb-2"
+                    style="max-width:80px;">
                 <p class="small text-secondary fst-italic m-0">“Control y confianza en cada registro”</p>
             </div>
         </div>
 
+        <!-- CONTENIDO -->
         <div id="page-content-wrapper">
-            <main class="container-fluid p-4 my-5" id="inicio-container">
+            <main class="container-fluid p-4 my-5">
 
-                <!-- TITULO -->
+                <!-- Título principal -->
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2 class="fw-bold text-dark mb-0"><i class="fa-solid fa-chart-line me-2 text-primary"></i>Dashboard
-                        General</h2>
-                    <span class="text-muted small">Actualizado: 11 Oct 2025</span>
+                    <div>
+                        <h2 class="fw-bold mb-0"><i class="fa-solid fa-arrow-down text-warning fs-1 me-3"></i>
+                            Salidas de Inventario</h2>
+                        <p class="text-muted">Gestión y seguimiento de productos despachados, vendidos o ajustados</p>
+                    </div>
+
+                    <button class="btn btn-warning text-dark">
+                        <i class="fa-solid fa-circle-minus me-2"></i> Registrar salida
+                    </button>
                 </div>
 
-                <!-- MÉTRICAS RÁPIDAS -->
-                <div class="row g-4 mb-5">
+                <!-- Tarjetas de estado general -->
+                <div class="row g-4 mb-4">
                     <div class="col-md-3">
-                        <div class="card border-0 shadow-sm p-3">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-pills fa-2x text-primary mb-2"></i>
-                                <h5 class="fw-bold mb-1">Productos Totales</h5>
-                                <h2 class="fw-bolder text-dark">1280</h2>
-                                <p class="small text-muted">En stock actualmente</p>
-                            </div>
+                        <div class="card shadow-sm border-0 p-3 h-100">
+                            <h6 class="fw-bold">Salidas Totales</h6>
+                            <p class="fs-4 text-warning fw-bold">980</p>
                         </div>
                     </div>
+
                     <div class="col-md-3">
-                        <div class="card border-0 shadow-sm p-3">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-triangle-exclamation fa-2x text-warning mb-2"></i>
-                                <h5 class="fw-bold mb-1">Stock Bajo</h5>
-                                <h2 class="fw-bolder text-dark">46</h2>
-                                <p class="small text-muted">Productos críticos</p>
-                            </div>
+                        <div class="card shadow-sm border-0 p-3 h-100">
+                            <h6 class="fw-bold">Última salida</h6>
+                            <p class="fs-4 text-success fw-bold">2025-01-16</p>
                         </div>
                     </div>
+
                     <div class="col-md-3">
-                        <div class="card border-0 shadow-sm p-3">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-clock-rotate-left fa-2x text-danger mb-2"></i>
-                                <h5 class="fw-bold mb-1">Vencidos</h5>
-                                <h2 class="fw-bolder text-dark">12</h2>
-                                <p class="small text-muted">Revisión urgente</p>
-                            </div>
+                        <div class="card shadow-sm border-0 p-3 h-100">
+                            <h6 class="fw-bold">Producto más despachado</h6>
+                            <p class="fs-6 fw-bold text-muted">Ibuprofeno 400mg</p>
                         </div>
                     </div>
+
                     <div class="col-md-3">
-                        <div class="card border-0 shadow-sm p-3">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-truck-field fa-2x text-success mb-2"></i>
-                                <h5 class="fw-bold mb-1">Proveedores Activos</h5>
-                                <h2 class="fw-bolder text-dark">18</h2>
-                                <p class="small text-muted">En operaciones</p>
-                            </div>
+                        <div class="card shadow-sm border-0 p-3 h-100">
+                            <h6 class="fw-bold">Responsable más activo</h6>
+                            <p class="fs-6 fw-bold text-muted">A. Rodríguez</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- GRÁFICOS -->
-                <div class="row g-4 mb-5">
-                    <div class="col-lg-6">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-header bg-white fw-bold"><i
-                                    class="fa-solid fa-chart-pie me-2 text-primary"></i>Distribución de Stock</div>
-                            <div class="card-body text-center">
-                                <img src="../assets/img/inventory_status.jpg" alt="Gráfico de stock"
-                                    class="img-fluid rounded">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-header bg-white fw-bold"><i
-                                    class="fa-solid fa-chart-line me-2 text-success"></i>Movimientos del Mes</div>
-                            <div class="card-body text-center">
-                                <img src="../assets/img/inventory_dashboard_it_transformation_at_workplace_ppt_themes_slide01.jpg"
-                                    alt="Gráfico movimientos" class="img-fluid rounded">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TABLA DE MOVIMIENTOS RECIENTES -->
-                <div class="card shadow-sm border-0 mb-5 dash-table">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-clock me-2 text-secondary"></i>Últimos Movimientos de Inventario
-                    </div>
+                <!-- Filtros -->
+                <div class="card border-0 shadow-sm mb-4">
                     <div class="card-body">
+
+                        <h5 class="fw-bold mb-3">
+                            <i class="fa-solid fa-filter me-2"></i>
+                            Filtros
+                        </h5>
+
+                        <form class="row g-3">
+
+                            <div class="col-md-3">
+                                <label class="form-label">Fecha desde</label>
+                                <input type="date" class="form-control">
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label">Fecha hasta</label>
+                                <input type="date" class="form-control">
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label">Producto</label>
+                                <select class="form-select">
+                                    <option selected>Seleccionar...</option>
+                                    <option>Ibuprofeno 400mg</option>
+                                    <option>Amoxicilina 500mg</option>
+                                    <option>Paracetamol 500mg</option>
+                                    <option>Clotrimazol crema 1%</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label">Tipo de salida</label>
+                                <select class="form-select">
+                                    <option selected>Seleccionar...</option>
+                                    <option>Venta</option>
+                                    <option>Devolución</option>
+                                    <option>Ajuste</option>
+                                    <option>Traslado</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 text-end mt-2">
+                                <button class="btn btn-secondary me-2">
+                                    <i class="fa-solid fa-rotate-left me-2"></i> Limpiar
+                                </button>
+                                <button class="btn btn-warning text-dark">
+                                    <i class="fa-solid fa-magnifying-glass me-2"></i> Buscar
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- Tabla de salidas -->
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+
+                        <h5 class="fw-bold mb-3">Listado de Salidas</h5>
+
                         <table class="table table-hover align-middle">
                             <thead class="table-light">
                                 <tr>
+                                    <th>ID Salida</th>
                                     <th>Fecha</th>
-                                    <th>Tipo</th>
                                     <th>Producto</th>
                                     <th>Cantidad</th>
                                     <th>Responsable</th>
+                                    <th>Tipo</th>
+                                    <th class="text-center">Acción</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>2025-10-10</td>
-                                    <td><span class="badge bg-success">Entrada</span></td>
-                                    <td>Amoxicilina 500mg</td>
-                                    <td>240</td>
-                                    <td>J. Pérez</td>
-                                </tr>
-                                <tr>
-                                    <td>2025-10-09</td>
-                                    <td><span class="badge bg-danger">Salida</span></td>
+                                    <td>#S-1120</td>
+                                    <td>2025-01-16</td>
                                     <td>Ibuprofeno 400mg</td>
                                     <td>120</td>
                                     <td>A. Rodríguez</td>
+                                    <td><span class="badge bg-danger">Venta</span></td>
+                                    <td class="text-center">
+                                        <a href="detalle_salida.html" class="btn btn-sm btn-outline-primary me-1"><i
+                                                class="fa-solid fa-eye"></i></a>
+                                        <a href="editar_salida.html" class="btn btn-sm btn-outline-secondary me-1"><i
+                                                class="fa-solid fa-pen"></i></a>
+                                        <a class="btn btn-sm btn-outline-danger"><i
+                                                class="fa-solid fa-trash"></i></a>
+                                    </td>
                                 </tr>
+
                                 <tr>
-                                    <td>2025-10-07</td>
-                                    <td><span class="badge bg-warning text-dark">Ajuste</span></td>
+                                    <td>#S-1118</td>
+                                    <td>2025-01-15</td>
                                     <td>Paracetamol 500mg</td>
-                                    <td>+30</td>
+                                    <td>90</td>
                                     <td>C. Méndez</td>
+                                    <td><span class="badge bg-danger">Venta</span></td>
+                                    <td class="text-center">
+                                        <a href="detalle_salida.html" class="btn btn-sm btn-outline-primary me-1"><i
+                                                class="fa-solid fa-eye"></i></a>
+                                        <a href="editar_salida.html" class="btn btn-sm btn-outline-secondary me-1"><i
+                                                class="fa-solid fa-pen"></i></a>
+                                        <a class="btn btn-sm btn-outline-danger"><i
+                                                class="fa-solid fa-trash"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#S-1105</td>
+                                    <td>2025-01-12</td>
+                                    <td>Alcohol 70% 500ml</td>
+                                    <td>30</td>
+                                    <td>D. Suárez</td>
+                                    <td><span class="badge bg-warning text-dark">Ajuste</span></td>
+                                    <td class="text-center">
+                                        <a href="detalle_salida.html" class="btn btn-sm btn-outline-primary me-1"><i
+                                                class="fa-solid fa-eye"></i></a>
+                                        <a href="editar_salida.html" class="btn btn-sm btn-outline-secondary me-1"><i
+                                                class="fa-solid fa-pen"></i></a>
+                                        <a class="btn btn-sm btn-outline-danger"><i
+                                                class="fa-solid fa-trash"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#S-1098</td>
+                                    <td>2025-01-09</td>
+                                    <td>Amoxicilina 500mg</td>
+                                    <td>70</td>
+                                    <td>J. Ramírez</td>
+                                    <td><span class="badge bg-danger">Venta</span></td>
+                                    <td class="text-center">
+                                        <a href="detalle_salida.html" class="btn btn-sm btn-outline-primary me-1"><i
+                                                class="fa-solid fa-eye"></i></a>
+                                        <a href="editar_salida.html" class="btn btn-sm btn-outline-secondary me-1"><i
+                                                class="fa-solid fa-pen"></i></a>
+                                        <a class="btn btn-sm btn-outline-danger"><i
+                                                class="fa-solid fa-trash"></i></a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
+
+                        <!-- Paginación -->
+                        <nav aria-label="Paginación de salidas" class="mt-3">
+                            <ul class="pagination justify-content-end">
+                                <li class="page-item disabled">
+                                    <a class="page-link">Anterior</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link">1</a></li>
+                                <li class="page-item"><a class="page-link">2</a></li>
+                                <li class="page-item"><a class="page-link">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link">Siguiente</a>
+                                </li>
+                            </ul>
+                        </nav>
+
                     </div>
                 </div>
 
-                <!-- BLOQUE FINAL DE ANÁLISIS -->
-                <div class="alert alert-primary shadow-sm mb-4">
-                    <i class="fa-solid fa-lightbulb me-2"></i>
-                    <strong>Recomendación:</strong> Se sugiere revisar el stock de los productos con vencimiento próximo
-                    y generar un reporte antes del cierre del mes.
-                </div>
             </main>
         </div>
     </div>
-    <!-- FOOTER DE LA PAGINA, CIERRE Y FINAL -->
-    <footer class="bg-dark pt-5 border-top text-white" style="border-top-color: #686767 !important;">
-        <div class="container">
-            <div class="row pb-4">
+        <footer class="bg-dark pt-5 border-top text-white" style="border-top-color: #686767 !important;">
+            <div class="container">
+                <div class="row pb-4">
 
-                <!-- CONTACTO RAPIDO CLIENTE-DESARROLLADOR -->
+                    <!-- CONTACTO RAPIDO CLIENTE-DESARROLLADOR -->
 
-                <div class="col-12 col-md-4 mb-4 mb-md-0">
-                    <h5 class="fw-bold mb-3">Contacto Rápido</h5>
-                    <p class="text-white-50 small">
-                        Suscríbete para recibir notificaciones o envíanos un mensaje corto.
-                    </p>
-                    <form action="#" class="d-grid gap-2">
-                        <input type="email" class="form-control" placeholder="Tu correo">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </form>
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                        <h5 class="fw-bold mb-3">Contacto Rápido</h5>
+                        <p class="text-white-50 small">
+                            Suscríbete para recibir notificaciones o envíanos un mensaje corto.
+                        </p>
+                        <form action="#" class="d-grid gap-2">
+                            <input type="email" class="form-control" placeholder="Tu correo">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+
+                    <!-- INFORMACION PERSONAL Y LABORAL -->
+
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                        <h5 class="fw-bold mb-3">Sobre Nosotros</h5>
+                        <p class="text-white-50">
+                            Somos una empresa dedicada a ofrecer soluciones digitales. Nuestro compromiso es la
+                            innovación y la calidad en el servicio.
+                        </p>
+                        <a href="#" class="text-decoration-none d-block mt-3">Leer más...</a>
+                    </div>
+
+                    <!-- RECURSOS Y POLITICAS -->
+
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                        <h5 class="fw-bold mb-3">Recursos</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-white-50">Preguntas Frecuentes</a></li>
+                            <li><a href="#" class="text-decoration-none text-white-50">Política de Privacidad</a></li>
+                            <li><a href="#" class="text-decoration-none text-white-50">Términos de Servicio</a></li>
+                            <li><a href="#" class="text-decoration-none text-white-50">Trabaja con Nosotros</a></li>
+                        </ul>
+
+                        <!-- REDES SOCIALES -->
+
+                        <div class="mt-4">
+                            <h6 class="fw-bold">Síguenos:</h6>
+                            <span class="fs-5 me-3"><i class="fa-brands fa-linkedin"></i></span>
+                            <span class="fs-5 me-3"><i class="fa-brands fa-instagram"></i></span>
+                            <span class="fs-5 me-3"><i class="fa-brands fa-behance"></i></span>
+                            <span class="fs-5 me-3"><i class="fa-brands fa-square-facebook"></i></span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- INFORMACION PERSONAL Y LABORAL -->
+                <!-- DERECHOS RESERVADOS -->
 
-                <div class="col-12 col-md-4 mb-4 mb-md-0">
-                    <h5 class="fw-bold mb-3">Sobre Nosotros</h5>
-                    <p class="text-white-50">
-                        Somos una empresa dedicada a ofrecer soluciones digitales. Nuestro compromiso es la
-                        innovación y la calidad en el servicio.
-                    </p>
-                    <a href="#" class="text-decoration-none d-block mt-3">Leer más...</a>
-                </div>
-
-                <!-- RECURSOS Y POLITICAS -->
-
-                <div class="col-12 col-md-4 mb-4 mb-md-0">
-                    <h5 class="fw-bold mb-3">Recursos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-white-50">Preguntas Frecuentes</a></li>
-                        <li><a href="#" class="text-decoration-none text-white-50">Política de Privacidad</a></li>
-                        <li><a href="#" class="text-decoration-none text-white-50">Términos de Servicio</a></li>
-                        <li><a href="#" class="text-decoration-none text-white-50">Trabaja con Nosotros</a></li>
-                    </ul>
-
-                    <!-- REDES SOCIALES -->
-
-                    <div class="mt-4">
-                        <h6 class="fw-bold">Síguenos:</h6>
-                        <span class="fs-5 me-3"><i class="fa-brands fa-linkedin"></i></span>
-                        <span class="fs-5 me-3"><i class="fa-brands fa-instagram"></i></span>
-                        <span class="fs-5 me-3"><i class="fa-brands fa-behance"></i></span>
-                        <span class="fs-5 me-3"><i class="fa-brands fa-square-facebook"></i></span>
+                <div class="row pt-3 border-top">
+                    <div class="col-12 text-center text-md-start">
+                        <p class="text-white-50 small mb-0">
+                            &copy; 2025 Asuras Col para MedicColombia . Todos los derechos reservados.
+                        </p>
                     </div>
                 </div>
             </div>
-
-            <!-- DERECHOS RESERVADOS -->
-
-            <div class="row pt-3 border-top">
-                <div class="col-12 text-center text-md-start">
-                    <p class="text-white-50 small mb-0">
-                        &copy; 2025 Asuras Col para MedicColombia . Todos los derechos reservados.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="../assets/js/menu.js"></script>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="../../assets/js/menu.js"></script>
 </body>
 
 </html>

@@ -54,3 +54,7 @@ section.bg-dark {
     border-radius: var(--bs-navbar-toggler-border-radius);
     transition: background .1s ease-in-out;
 }
+
+#paginacion:hover{
+    cursor: pointer;
+}
