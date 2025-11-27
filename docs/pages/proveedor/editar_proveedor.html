@@ -11,7 +11,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../../assets/css/menu.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
-    <title>Detalle salida</title>
+    <title>Detalle producto</title>
 </head>
 
 <body class="toggled">
@@ -43,8 +43,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="../index.html"><i
-                                    class="fa-solid fa-house me-1"></i>Inicio</a>
+                            <a class="nav-link" href="../index.html"><i class="fa-solid fa-house me-1"></i>Inicio</a>
                         </li>
 
                         <li class="nav-item">
@@ -56,12 +55,12 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInventario" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-boxes-stacked me-1"></i>Inventario
+                                <i class="fa-solid fa-boxes-stacked me-1 active"></i>Inventario
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownInventario">
-                                <li><a class="dropdown-item" href="inventario.html">Ver productos</a></li>
-                                <li><a class="dropdown-item" href="entradas.html">Entradas</a></li>
-                                <li><a class="dropdown-item" href="salidas.html">Salidas</a></li>
+                                <li><a class="dropdown-item" href="../inventario/inventario.html">Ver productos</a></li>
+                                <li><a class="dropdown-item" href="../inventario/entradas.html">Entradas</a></li>
+                                <li><a class="dropdown-item" href="../inventario/salidas.html">Salidas</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -79,7 +78,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-warning" href="../login.html"><i
+                            <a class="nav-link text-danger" href="../login.html"><i
                                     class="fa-solid fa-right-from-bracket me-1"></i>Cerrar sesión</a>
                         </li>
 
@@ -96,8 +95,6 @@
         </nav>
     </header>
     <div class="d-flex" id="wrapper">
-
-        <!-- SIDEBAR -->
         <div class="bg-dark text-white border-end d-flex flex-column justify-content-between" id="sidebar-wrapper"
             style="min-height:100vh;">
 
@@ -306,163 +303,154 @@
             </div>
         </div>
 
-        <!-- CONTENIDO -->
-        <div id="page-content-wrapper">
-            <main class="container-fluid p-4 my-5">
+        <div id="page-content-wrapper" class="p-4">
+            <main class="container-fluid py-4" id="editar-proveedor">
 
                 <!-- ENCABEZADO -->
-                <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex justify-content-between align-items-start mb-4 flex-wrap">
                     <div>
-                        <h2 class="fw-bold mb-0"><i class="fa-solid fa-arrow-down text-warning fs-1 me-3"></i>Detalle de
-                            Salida</h2>
-                        <p class="text-muted">Registro detallado de despacho o venta de productos</p>
+                        <h2 class="fw-bold mb-1">
+                            <i class="fa-solid fa-pen-to-square me-2 text-warning"></i>Editar Proveedor
+                        </h2>
+                        <p class="text-muted">Modificación controlada de datos del proveedor</p>
                     </div>
 
-                    <a href="salidas.html" class="btn btn-sm btn-outline-secondary">
-                        <i class="fa-solid fa-arrow-left me-2"></i> Volver
+                    <a href="../proveedor/detalle_proveedor.html" class="btn btn-sm btn-outline-secondary">
+                        <i class="fa-solid fa-arrow-left me-1"></i>Volver
                     </a>
                 </div>
 
+                <form class="row g-4">
 
-                <div class="row g-4 mb-4">
+                    <!-- DATOS GENERALES -->
+                    <div class="col-12">
+                        <div class="card shadow-sm p-4">
+                            <h5 class="fw-bold mb-3">
+                                <i class="fa-solid fa-id-card me-2"></i>Datos generales
+                            </h5>
 
-                    <div class="col-md-3">
-                        <div class="card p-3 shadow-sm border-0 h-100">
-                            <h6 class="fw-bold">ID Salida</h6>
-                            <p class="fs-4 fw-bold text-warning">#S-1120</p>
-                        </div>
-                    </div>
+                            <div class="row g-3">
 
-                    <div class="col-md-3">
-                        <div class="card p-3 shadow-sm border-0 h-100">
-                            <h6 class="fw-bold">Fecha de registro</h6>
-                            <p class="fs-5 fw-bold">2025-01-16</p>
-                        </div>
-                    </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Nombre del proveedor</label>
+                                    <input type="text" class="form-control" value="Distribuciones Farma S.A.">
+                                </div>
 
-                    <div class="col-md-3">
-                        <div class="card p-3 shadow-sm border-0 h-100">
-                            <h6 class="fw-bold">Responsable</h6>
-                            <p class="fw-bold text-muted">A. Rodríguez</p>
-                        </div>
-                    </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">NIT</label>
+                                    <input type="text" class="form-control" value="901.256.789-1" disabled
+                                        data-bs-toggle="tooltip" title="Este dato no puede cambiarse.">
+                                </div>
 
-                    <div class="col-md-3">
-                        <div class="card p-3 shadow-sm border-0 h-100">
-                            <h6 class="fw-bold">Tipo de salida</h6>
-                            <span class="badge bg-warning px-3 py-2">Venta</span>
-                        </div>
-                    </div>
-                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Estado</label>
+                                    <select class="form-select">
+                                        <option selected>Activo</option>
+                                        <option>Inactivo</option>
+                                    </select>
+                                </div>
 
-
-                <div class="card mb-4 border-0 shadow-sm">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-user me-2 text-secondary"></i> Información del Cliente
-                    </div>
-                    <div class="card-body">
-
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <p class="fw-bold mb-1">Cliente:</p>
-                                <p class="text-muted">Juan Pérez</p>
-                            </div>
-
-                            <div class="col-md-4">
-                                <p class="fw-bold mb-1">Teléfono:</p>
-                                <p class="text-muted">312 555 9988</p>
-                            </div>
-
-                            <div class="col-md-4">
-                                <p class="fw-bold mb-1">Correo:</p>
-                                <p class="text-muted">juanperez@example.com</p>
                             </div>
                         </div>
-
                     </div>
-                </div>
 
+                    <!-- CONTACTO -->
+                    <div class="col-12">
+                        <div class="card shadow-sm p-4">
+                            <h5 class="fw-bold mb-3">
+                                <i class="fa-solid fa-envelope me-2"></i>Información de contacto
+                            </h5>
 
-                <div class="card mb-4 border-0 shadow-sm">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-box-open me-2 text-secondary"></i> Productos retirados
-                    </div>
-                    <div class="card-body">
+                            <div class="row g-3">
 
-                        <table class="table table-hover align-middle">
-                            <thead class="table-light">
-                                <tr>
-                                    <th>Producto</th>
-                                    <th>Cantidad</th>
-                                    <th>Valor unitario</th>
-                                    <th>Subtotal</th>
-                                </tr>
-                            </thead>
+                                <div class="col-md-6">
+                                    <label class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" value="contacto@farma.com">
+                                </div>
 
-                            <tbody>
-                                <tr>
-                                    <td>Ibuprofeno 400mg</td>
-                                    <td>120</td>
-                                    <td>$ 1.200</td>
-                                    <td>$ 144.000</td>
-                                </tr>
+                                <div class="col-md-3">
+                                    <label class="form-label">Teléfono</label>
+                                    <input type="text" class="form-control" value="+57 310 555 8899">
+                                </div>
 
-                                <tr>
-                                    <td>Amoxicilina 500mg</td>
-                                    <td>40</td>
-                                    <td>$ 4.500</td>
-                                    <td>$ 180.000</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                <div class="col-md-3">
+                                    <label class="form-label">Asesor asignado</label>
+                                    <input type="text" class="form-control" value="Carlos Méndez">
+                                </div>
 
-                        <div class="text-end fw-bold fs-5 mt-3">
-                            Total salida: <span class="text-warning">$ 324.000</span>
+                            </div>
                         </div>
-
                     </div>
-                </div>
 
+                    <!-- LOGÍSTICA -->
+                    <div class="col-12">
+                        <div class="card shadow-sm p-4">
+                            <h5 class="fw-bold mb-3">
+                                <i class="fa-solid fa-truck-fast me-2"></i>Datos logísticos
+                            </h5>
 
-                <div class="card mb-4 border-0 shadow-sm">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-tag me-2 text-secondary"></i> Información del Movimiento
+                            <div class="row g-3">
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Tiempo promedio de entrega</label>
+                                    <input type="number" class="form-control" value="4.2" data-bs-toggle="tooltip"
+                                        title="Promedio en días">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Frecuencia de pedido</label>
+                                    <input type="text" class="form-control" value="Cada 15 días">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Nivel de cumplimiento (%)</label>
+                                    <input type="number" class="form-control" value="98">
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
 
-                        <p class="fw-bold mb-1">Motivo:</p>
-                        <p class="text-muted">Venta registrada en punto físico</p>
+                    <!-- CAMPOS SENSIBLES -->
+                    <div class="col-12">
+                        <div class="card shadow-sm p-4 border-danger">
+                            <h5 class="fw-bold mb-3 text-danger">
+                                <i class="fa-solid fa-lock me-2"></i>Campos restringidos
+                            </h5>
 
-                        <hr>
+                            <div class="alert alert-warning small">
+                                Estos campos requieren permisos de administrador.
+                            </div>
 
-                        <p class="fw-bold mb-1">Observaciones:</p>
-                        <p class="text-muted fst-italic">
-                            Se verificó la calidad del producto y fecha de vencimiento. Sin inconsistencias.
-                        </p>
+                            <div class="row g-3">
 
+                                <div class="col-md-6">
+                                    <label class="form-label">Cambio de proveedor principal</label>
+                                    <input type="text" class="form-control" value="Proveedor autorizado" disabled
+                                        data-bs-toggle="tooltip"
+                                        title="Modificación solo para usuarios administradores.">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Clasificación del contrato</label>
+                                    <input type="text" class="form-control" value="Contrato vigente 2025" disabled
+                                        data-bs-toggle="tooltip" title="Dato contractual protegido.">
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-
-                <div class="card border-0 shadow-sm mb-5">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-clock-rotate-left me-2 text-secondary"></i> Historial Relacionado
+                    <!-- ACCIONES -->
+                    <div class="col-12 text-end">
+                        <button class="btn btn-success">
+                            <i class="fa-solid fa-save me-1"></i>Guardar cambios
+                        </button>
                     </div>
-                    <div class="card-body">
 
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                Última salida del mismo cliente → <strong>#S-1108</strong> (2025-01-10)
-                            </li>
-                            <li class="list-group-item">
-                                Productos asociados a esta salida han generado <strong>3 alertas de stock bajo</strong>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
+                </form>
             </main>
+
 
         </div>
     </div>

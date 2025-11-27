@@ -11,7 +11,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../../assets/css/menu.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
-    <title>Detalle salida</title>
+    <title>Detalle producto</title>
 </head>
 
 <body class="toggled">
@@ -43,8 +43,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="../index.html"><i
-                                    class="fa-solid fa-house me-1"></i>Inicio</a>
+                            <a class="nav-link" href="../index.html"><i class="fa-solid fa-house me-1"></i>Inicio</a>
                         </li>
 
                         <li class="nav-item">
@@ -56,12 +55,12 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInventario" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-boxes-stacked me-1"></i>Inventario
+                                <i class="fa-solid fa-boxes-stacked me-1 active"></i>Inventario
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownInventario">
-                                <li><a class="dropdown-item" href="inventario.html">Ver productos</a></li>
-                                <li><a class="dropdown-item" href="entradas.html">Entradas</a></li>
-                                <li><a class="dropdown-item" href="salidas.html">Salidas</a></li>
+                                <li><a class="dropdown-item" href="../inventario/inventario.html">Ver productos</a></li>
+                                <li><a class="dropdown-item" href="../inventario/entradas.html">Entradas</a></li>
+                                <li><a class="dropdown-item" href="../inventario/salidas.html">Salidas</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -79,7 +78,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-warning" href="../login.html"><i
+                            <a class="nav-link text-danger" href="../login.html"><i
                                     class="fa-solid fa-right-from-bracket me-1"></i>Cerrar sesión</a>
                         </li>
 
@@ -96,8 +95,6 @@
         </nav>
     </header>
     <div class="d-flex" id="wrapper">
-
-        <!-- SIDEBAR -->
         <div class="bg-dark text-white border-end d-flex flex-column justify-content-between" id="sidebar-wrapper"
             style="min-height:100vh;">
 
@@ -306,163 +303,108 @@
             </div>
         </div>
 
-        <!-- CONTENIDO -->
         <div id="page-content-wrapper">
-            <main class="container-fluid p-4 my-5">
+            <main class="container-fluid p-4 my-5" id="crear-pedido">
 
                 <!-- ENCABEZADO -->
-                <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex justify-content-between align-items-start flex-wrap mb-4">
                     <div>
-                        <h2 class="fw-bold mb-0"><i class="fa-solid fa-arrow-down text-warning fs-1 me-3"></i>Detalle de
-                            Salida</h2>
-                        <p class="text-muted">Registro detallado de despacho o venta de productos</p>
+                        <h2 class="fw-bold mb-1">
+                            <i class="fa-solid fa-file-circle-plus me-2 text-success"></i>Nuevo Pedido
+                        </h2>
+                        <p class="text-muted mb-0">Crear un pedido a proveedor</p>
                     </div>
 
-                    <a href="salidas.html" class="btn btn-sm btn-outline-secondary">
-                        <i class="fa-solid fa-arrow-left me-2"></i> Volver
+                    <a href="listado_pedidos.html" class="btn btn-outline-secondary btn-sm mt-2 mt-md-0">
+                        <i class="fa-solid fa-arrow-left me-1"></i>Volver
                     </a>
                 </div>
 
+                <!-- FORMULARIO -->
+                <form class="row g-4">
 
-                <div class="row g-4 mb-4">
+                    <!-- PROVEEDOR -->
+                    <div class="col-12">
+                        <div class="card shadow-sm p-4">
+                            <h5 class="fw-bold mb-3">Datos del proveedor</h5>
 
-                    <div class="col-md-3">
-                        <div class="card p-3 shadow-sm border-0 h-100">
-                            <h6 class="fw-bold">ID Salida</h6>
-                            <p class="fs-4 fw-bold text-warning">#S-1120</p>
-                        </div>
-                    </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Proveedor</label>
+                                    <select class="form-select">
+                                        <option>Farmacéutica Andina S.A</option>
+                                        <option>BioSalud LTDA</option>
+                                        <option>Distribuidora Médica Norte</option>
+                                    </select>
+                                </div>
 
-                    <div class="col-md-3">
-                        <div class="card p-3 shadow-sm border-0 h-100">
-                            <h6 class="fw-bold">Fecha de registro</h6>
-                            <p class="fs-5 fw-bold">2025-01-16</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="card p-3 shadow-sm border-0 h-100">
-                            <h6 class="fw-bold">Responsable</h6>
-                            <p class="fw-bold text-muted">A. Rodríguez</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="card p-3 shadow-sm border-0 h-100">
-                            <h6 class="fw-bold">Tipo de salida</h6>
-                            <span class="badge bg-warning px-3 py-2">Venta</span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="card mb-4 border-0 shadow-sm">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-user me-2 text-secondary"></i> Información del Cliente
-                    </div>
-                    <div class="card-body">
-
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <p class="fw-bold mb-1">Cliente:</p>
-                                <p class="text-muted">Juan Pérez</p>
-                            </div>
-
-                            <div class="col-md-4">
-                                <p class="fw-bold mb-1">Teléfono:</p>
-                                <p class="text-muted">312 555 9988</p>
-                            </div>
-
-                            <div class="col-md-4">
-                                <p class="fw-bold mb-1">Correo:</p>
-                                <p class="text-muted">juanperez@example.com</p>
+                                <div class="col-md-6">
+                                    <label class="form-label">Fecha estimada</label>
+                                    <input type="date" class="form-control">
+                                </div>
                             </div>
                         </div>
-
                     </div>
-                </div>
 
+                    <!-- PRODUCTOS -->
+                    <div class="col-12">
+                        <div class="card shadow-sm p-4">
+                            <h5 class="fw-bold mb-3">Productos del pedido</h5>
 
-                <div class="card mb-4 border-0 shadow-sm">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-box-open me-2 text-secondary"></i> Productos retirados
-                    </div>
-                    <div class="card-body">
+                            <table class="table table-bordered align-middle">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="productos-pedido">
+                                    <tr>
+                                        <td>
+                                            <select class="form-select">
+                                                <option>Amoxicilina 500mg</option>
+                                                <option>Ibuprofeno 400mg</option>
+                                                <option>Guantes quirúrgicos</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="number" min="1" class="form-control" value="10">
+                                        </td>
+                                        <td class="text-center">
+                                            <button type="button" class="btn btn-danger btn-sm">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                        <table class="table table-hover align-middle">
-                            <thead class="table-light">
-                                <tr>
-                                    <th>Producto</th>
-                                    <th>Cantidad</th>
-                                    <th>Valor unitario</th>
-                                    <th>Subtotal</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td>Ibuprofeno 400mg</td>
-                                    <td>120</td>
-                                    <td>$ 1.200</td>
-                                    <td>$ 144.000</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Amoxicilina 500mg</td>
-                                    <td>40</td>
-                                    <td>$ 4.500</td>
-                                    <td>$ 180.000</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="text-end fw-bold fs-5 mt-3">
-                            Total salida: <span class="text-warning">$ 324.000</span>
+                            <button type="button" class="btn btn-outline-primary">
+                                <i class="fa-solid fa-plus me-1"></i>Agregar producto
+                            </button>
                         </div>
-
                     </div>
-                </div>
 
-
-                <div class="card mb-4 border-0 shadow-sm">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-tag me-2 text-secondary"></i> Información del Movimiento
+                    <!-- OBSERVACIONES -->
+                    <div class="col-12">
+                        <div class="card shadow-sm p-4">
+                            <h5 class="fw-bold mb-3">Observaciones</h5>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
                     </div>
-                    <div class="card-body">
 
-                        <p class="fw-bold mb-1">Motivo:</p>
-                        <p class="text-muted">Venta registrada en punto físico</p>
-
-                        <hr>
-
-                        <p class="fw-bold mb-1">Observaciones:</p>
-                        <p class="text-muted fst-italic">
-                            Se verificó la calidad del producto y fecha de vencimiento. Sin inconsistencias.
-                        </p>
-
+                    <!-- BOTÓN -->
+                    <div class="col-12 text-end">
+                        <button class="btn btn-success">
+                            <i class="fa-solid fa-check me-1"></i>Crear pedido
+                        </button>
                     </div>
-                </div>
 
-
-                <div class="card border-0 shadow-sm mb-5">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-clock-rotate-left me-2 text-secondary"></i> Historial Relacionado
-                    </div>
-                    <div class="card-body">
-
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                Última salida del mismo cliente → <strong>#S-1108</strong> (2025-01-10)
-                            </li>
-                            <li class="list-group-item">
-                                Productos asociados a esta salida han generado <strong>3 alertas de stock bajo</strong>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
+                </form>
 
             </main>
+
 
         </div>
     </div>

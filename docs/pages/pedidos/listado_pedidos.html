@@ -11,7 +11,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../../assets/css/menu.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
-    <title>Detalle salida</title>
+    <title>Detalle producto</title>
 </head>
 
 <body class="toggled">
@@ -43,8 +43,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="../index.html"><i
-                                    class="fa-solid fa-house me-1"></i>Inicio</a>
+                            <a class="nav-link" href="../index.html"><i class="fa-solid fa-house me-1"></i>Inicio</a>
                         </li>
 
                         <li class="nav-item">
@@ -56,12 +55,12 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInventario" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-boxes-stacked me-1"></i>Inventario
+                                <i class="fa-solid fa-boxes-stacked me-1 active"></i>Inventario
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownInventario">
-                                <li><a class="dropdown-item" href="inventario.html">Ver productos</a></li>
-                                <li><a class="dropdown-item" href="entradas.html">Entradas</a></li>
-                                <li><a class="dropdown-item" href="salidas.html">Salidas</a></li>
+                                <li><a class="dropdown-item" href="../inventario/inventario.html">Ver productos</a></li>
+                                <li><a class="dropdown-item" href="../inventario/entradas.html">Entradas</a></li>
+                                <li><a class="dropdown-item" href="../inventario/salidas.html">Salidas</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -79,7 +78,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-warning" href="../login.html"><i
+                            <a class="nav-link text-danger" href="../login.html"><i
                                     class="fa-solid fa-right-from-bracket me-1"></i>Cerrar sesión</a>
                         </li>
 
@@ -96,8 +95,6 @@
         </nav>
     </header>
     <div class="d-flex" id="wrapper">
-
-        <!-- SIDEBAR -->
         <div class="bg-dark text-white border-end d-flex flex-column justify-content-between" id="sidebar-wrapper"
             style="min-height:100vh;">
 
@@ -306,163 +303,167 @@
             </div>
         </div>
 
-        <!-- CONTENIDO -->
         <div id="page-content-wrapper">
-            <main class="container-fluid p-4 my-5">
+            <main class="container-fluid p-4 my-5" id="listado-pedidos">
 
                 <!-- ENCABEZADO -->
-                <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex justify-content-between align-items-start flex-wrap mb-4">
                     <div>
-                        <h2 class="fw-bold mb-0"><i class="fa-solid fa-arrow-down text-warning fs-1 me-3"></i>Detalle de
-                            Salida</h2>
-                        <p class="text-muted">Registro detallado de despacho o venta de productos</p>
+                        <h2 class="fw-bold mb-1">
+                            <i class="fa-solid fa-file-invoice me-2 text-success"></i>Gestión de Pedidos
+                        </h2>
+                        <p class="text-muted mb-0">Control de pedidos realizados a proveedores</p>
                     </div>
 
-                    <a href="salidas.html" class="btn btn-sm btn-outline-secondary">
-                        <i class="fa-solid fa-arrow-left me-2"></i> Volver
+                    <a href="nuevo_pedido.html" class="btn btn-outline-primary btn-sm mt-2 mt-md-0">
+                        <i class="fa-solid fa-plus me-1"></i>Nuevo Pedido
                     </a>
                 </div>
 
+                <!-- FILTROS -->
+                <div class="card shadow-sm p-4 mb-4">
+                    <h5 class="fw-bold mb-3">Filtros de búsqueda</h5>
 
-                <div class="row g-4 mb-4">
+                    <form class="row g-3">
 
-                    <div class="col-md-3">
-                        <div class="card p-3 shadow-sm border-0 h-100">
-                            <h6 class="fw-bold">ID Salida</h6>
-                            <p class="fs-4 fw-bold text-warning">#S-1120</p>
+                        <div class="col-md-3">
+                            <label class="form-label">Proveedor</label>
+                            <select class="form-select">
+                                <option value="">Todos</option>
+                                <option>Farmacéutica Andina S.A</option>
+                                <option>BioSalud LTDA</option>
+                                <option>Distribuidora Médica Norte</option>
+                            </select>
                         </div>
-                    </div>
 
-                    <div class="col-md-3">
-                        <div class="card p-3 shadow-sm border-0 h-100">
-                            <h6 class="fw-bold">Fecha de registro</h6>
-                            <p class="fs-5 fw-bold">2025-01-16</p>
+                        <div class="col-md-3">
+                            <label class="form-label">Estado</label>
+                            <select class="form-select">
+                                <option value="">Todos</option>
+                                <option>Pendiente</option>
+                                <option>En camino</option>
+                                <option>Recibido</option>
+                            </select>
                         </div>
-                    </div>
 
-                    <div class="col-md-3">
-                        <div class="card p-3 shadow-sm border-0 h-100">
-                            <h6 class="fw-bold">Responsable</h6>
-                            <p class="fw-bold text-muted">A. Rodríguez</p>
+                        <div class="col-md-3">
+                            <label class="form-label">Desde</label>
+                            <input type="date" class="form-control">
                         </div>
-                    </div>
 
-                    <div class="col-md-3">
-                        <div class="card p-3 shadow-sm border-0 h-100">
-                            <h6 class="fw-bold">Tipo de salida</h6>
-                            <span class="badge bg-warning px-3 py-2">Venta</span>
+                        <div class="col-md-3">
+                            <label class="form-label">Hasta</label>
+                            <input type="date" class="form-control">
                         </div>
-                    </div>
+
+                    </form>
+
                 </div>
 
+                <!-- TABLA -->
+                <div class="card shadow-sm p-4">
+                    <h5 class="fw-bold mb-3">Pedidos registrados</h5>
 
-                <div class="card mb-4 border-0 shadow-sm">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-user me-2 text-secondary"></i> Información del Cliente
-                    </div>
-                    <div class="card-body">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID Pedido</th>
+                                <th>Proveedor</th>
+                                <th>Productos</th>
+                                <th>Fecha creación</th>
+                                <th>Fecha estimada</th>
+                                <th>Estado</th>
+                                <th>Avance</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
 
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <p class="fw-bold mb-1">Cliente:</p>
-                                <p class="text-muted">Juan Pérez</p>
-                            </div>
+                        <tbody>
+                            <!-- 1 -->
+                            <tr>
+                                <td>PE-125</td>
+                                <td>Farmacéutica Andina</td>
+                                <td>3 productos</td>
+                                <td>2025-01-08</td>
+                                <td>2025-01-15</td>
+                                <td><span class="badge bg-success">Recibido</span></td>
+                                <td>
+                                    <div class="progress" style="height:10px">
+                                        <div class="progress-bar bg-success" style="width: 100%"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a class="btn btn-sm btn-outline-primary me-1" href="detalle_pedido.html">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </a>
+                                    <a class="btn btn-sm btn-outline-secondary me-1" href="editar_pedido.html">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </a>
+                                </td>
+                            </tr>
 
-                            <div class="col-md-4">
-                                <p class="fw-bold mb-1">Teléfono:</p>
-                                <p class="text-muted">312 555 9988</p>
-                            </div>
+                            <!-- 2 -->
+                            <tr>
+                                <td>PE-132</td>
+                                <td>BioSalud LTDA</td>
+                                <td>5 productos</td>
+                                <td>2025-02-01</td>
+                                <td>2025-02-08</td>
+                                <td><span class="badge bg-warning text-dark">En camino</span></td>
+                                <td>
+                                    <div class="progress" style="height:10px">
+                                        <div class="progress-bar bg-warning" style="width: 60%"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a class="btn btn-sm btn-outline-primary me-1" href="detalle_pedido.html">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </a>
+                                    <a class="btn btn-sm btn-outline-secondary me-1" href="editar_pedido.html">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </a>
+                                </td>
+                            </tr>
 
-                            <div class="col-md-4">
-                                <p class="fw-bold mb-1">Correo:</p>
-                                <p class="text-muted">juanperez@example.com</p>
-                            </div>
-                        </div>
+                            <!-- 3 -->
+                            <tr>
+                                <td>PE-138</td>
+                                <td>Distribuidora Médica Norte</td>
+                                <td>2 productos</td>
+                                <td>2025-02-10</td>
+                                <td>2025-02-17</td>
+                                <td><span class="badge bg-secondary">Pendiente</span></td>
+                                <td>
+                                    <div class="progress" style="height:10px">
+                                        <div class="progress-bar bg-secondary" style="width: 20%"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a class="btn btn-sm btn-outline-primary me-1" href="detalle_pedido.html">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </a>
+                                    <a class="btn btn-sm btn-outline-secondary me-1" href="editar_pedido.html">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </a>
+                                </td>
+                            </tr>
 
-                    </div>
-                </div>
+                        </tbody>
+                    </table>
 
-
-                <div class="card mb-4 border-0 shadow-sm">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-box-open me-2 text-secondary"></i> Productos retirados
-                    </div>
-                    <div class="card-body">
-
-                        <table class="table table-hover align-middle">
-                            <thead class="table-light">
-                                <tr>
-                                    <th>Producto</th>
-                                    <th>Cantidad</th>
-                                    <th>Valor unitario</th>
-                                    <th>Subtotal</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td>Ibuprofeno 400mg</td>
-                                    <td>120</td>
-                                    <td>$ 1.200</td>
-                                    <td>$ 144.000</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Amoxicilina 500mg</td>
-                                    <td>40</td>
-                                    <td>$ 4.500</td>
-                                    <td>$ 180.000</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="text-end fw-bold fs-5 mt-3">
-                            Total salida: <span class="text-warning">$ 324.000</span>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="card mb-4 border-0 shadow-sm">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-tag me-2 text-secondary"></i> Información del Movimiento
-                    </div>
-                    <div class="card-body">
-
-                        <p class="fw-bold mb-1">Motivo:</p>
-                        <p class="text-muted">Venta registrada en punto físico</p>
-
-                        <hr>
-
-                        <p class="fw-bold mb-1">Observaciones:</p>
-                        <p class="text-muted fst-italic">
-                            Se verificó la calidad del producto y fecha de vencimiento. Sin inconsistencias.
-                        </p>
-
-                    </div>
-                </div>
-
-
-                <div class="card border-0 shadow-sm mb-5">
-                    <div class="card-header bg-white fw-bold">
-                        <i class="fa-solid fa-clock-rotate-left me-2 text-secondary"></i> Historial Relacionado
-                    </div>
-                    <div class="card-body">
-
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                Última salida del mismo cliente → <strong>#S-1108</strong> (2025-01-10)
-                            </li>
-                            <li class="list-group-item">
-                                Productos asociados a esta salida han generado <strong>3 alertas de stock bajo</strong>
-                            </li>
+                    <!-- PAGINACIÓN -->
+                    <nav class="mt-3">
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item disabled"><a class="page-link">Anterior</a></li>
+                            <li class="page-item active"><a class="page-link">1</a></li>
+                            <li class="page-item"><a class="page-link">2</a></li>
+                            <li class="page-item"><a class="page-link">3</a></li>
+                            <li class="page-item"><a class="page-link">Siguiente</a></li>
                         </ul>
-
-                    </div>
+                    </nav>
                 </div>
-
             </main>
+
 
         </div>
     </div>

@@ -1,133 +1,477 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Editar Salida</title>
-
-    <!-- BOOTSTRAP -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    />
-
-    <!-- ICONOS -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-
-    <style>
-        body {
-            background-color: #f4f6f9;
-        }
-        #sidebar-wrapper {
-            width: 250px;
-            min-height: 100vh;
-            background: #343a40;
-            color: #fff;
-        }
-        #sidebar-wrapper .sidebar-heading {
-            padding: 1rem;
-            font-size: 1.3rem;
-            text-align: center;
-            background: #212529;
-        }
-        #sidebar-wrapper .list-group-item {
-            background: #343a40;
-            color: #fff;
-            border: none;
-        }
-        #sidebar-wrapper .list-group-item:hover {
-            background: #495057;
-        }
-        #page-content-wrapper {
-            flex: 1;
-            padding: 20px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/menu.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <title>Detalle salida</title>
 </head>
 
-<body>
-    <div class="d-flex" id="wrapper">
-        <!-- SIDEBAR -->
-        <div id="sidebar-wrapper">
-            <div class="sidebar-heading">
-                <i class="fa-solid fa-box"></i> Inventario
+<body class="toggled">
+
+    <header role="banner">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container-fluid">
+                <!-- LOGO + NOMBRE DE LA APLICACIÓN -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="../../assets/img/logo_prototipo.png" alt="Logo" style="max-height:40px;" class="me-2">
+                    <span class="fw-bold">Asuras Col</span>
+                </a>
+
+                <!-- BOTÓN DE TOGGLER (sidebar y colapso general [menu lateral]) -->
+                <div class="d-flex align-items-center collapso">
+                    <button class="btn me-2 buttonSidebar" id="sidebarToggle" title="Mostrar menú lateral">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- CONTENIDO NAV -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../index.html"><i
+                                    class="fa-solid fa-house me-1"></i>Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../dashboard.html"><i
+                                    class="fa-solid fa-chart-line me-1"></i>Dashboard</a>
+                        </li>
+
+                        <!-- DROPDOWN -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInventario" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-boxes-stacked me-1"></i>Inventario
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownInventario">
+                                <li><a class="dropdown-item" href="inventario.html">Ver productos</a></li>
+                                <li><a class="dropdown-item" href="entradas.html">Entradas</a></li>
+                                <li><a class="dropdown-item" href="salidas.html">Salidas</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="../reporte/reportes.html">Reportes</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-user me-1"></i>Perfil</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../configuracion/configuracion.html"><i
+                                    class="fa-solid fa-gear me-1"></i>Configuración</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="../login.html"><i
+                                    class="fa-solid fa-right-from-bracket me-1"></i>Cerrar sesión</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- BÚSQUEDA -->
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
             </div>
-            <div class="list-group list-group-flush">
-                <a class="list-group-item" href="dashboard.html">
-                    <i class="fa-solid fa-gauge"></i> Dashboard
-                </a>
-                <a class="list-group-item" href="ver_productos.html">
-                    <i class="fa-solid fa-boxes"></i> Ver Productos
-                </a>
-                <a class="list-group-item" href="entradas.html">
-                    <i class="fa-solid fa-arrow-down"></i> Entradas
-                </a>
-                <a class="list-group-item" href="salidas.html">
-                    <i class="fa-solid fa-arrow-up"></i> Salidas
-                </a>
-                <a class="list-group-item" href="reportes.html">
-                    <i class="fa-solid fa-chart-line"></i> Reportes
-                </a>
-                <a class="list-group-item text-danger" href="#">
-                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión
-                </a>
+        </nav>
+    </header>
+    <div class="d-flex" id="wrapper">
+
+        <!-- SIDEBAR -->
+        <div class="bg-dark text-white border-end d-flex flex-column justify-content-between" id="sidebar-wrapper"
+            style="min-height:100vh;">
+
+            <!-- ENCABEZADO -->
+            <div>
+                <div class="sidebar-heading p-4 fs-4 d-flex align-items-center justify-content-center">
+                    <span class="card-text">Menú</span>
+                </div>
+
+                <!-- CONTENIDO PRINCIPAL -->
+                <div class="list-group list-group-flush">
+
+                    <!-- INVENTARIO -->
+                    <a href="#collapseInventario" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false"
+                        aria-controls="collapseInventario">
+                        <i class="fa-solid fa-box me-2"></i> Inventario
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapseInventario">
+                        <a href="../inventario/inventario.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
+                            Inventario</a>
+                        <a href="../inventario/nuevo_producto.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Registrar
+                            Producto</a>
+
+                        <a href="#collapseMovimientos"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0"
+                            data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseMovimientos">
+                            Movimientos
+                            <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                        </a>
+                        <div class="collapse ms-3" id="collapseMovimientos">
+                            <a href="../inventario/entradas.html"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Entradas</a>
+                            <a href="../inventario/salidas.html"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Salidas</a>
+                            <a href="../inventario/transferencias.html"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ajustes</a>
+                        </div>
+
+                        <a href="../alertas/vencimientos_alertas.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Vencimientos
+                            y Alertas</a>
+
+                        <a href="#collapseReportesInv"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0"
+                            data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseReportesInv">
+                            Reportes rápidos
+                            <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                        </a>
+                        <div class="collapse ms-3" id="collapseReportesInv">
+                            <a href="../reporte/reporte_stock.html"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Stock</a>
+                            <a href="../reporte/reporte_vencidos.html"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Vencidos</a>
+                            <a href="../reporte/reporte_movimientos.html"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Movimientos</a>
+                        </div>
+                    </div>
+
+                    <!-- PEDIDOS -->
+                    <a href="#collapsePedidos" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapsePedidos">
+                        <i class="fa-solid fa-boxes-stacked me-2"></i> Pedidos
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapsePedidos">
+                        <a href="../pedidos/listado_pedidos.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">
+                            Transferencias</a>
+                        <a href="../pedidos/nuevo_pedido.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Registrar
+                            Nuevo</a>
+                        <a href="pedido/en_camino.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">En
+                            camino</a>
+                        <a href="../pedidos/historial_entregas.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Historial
+                            de entregas</a>
+                    </div>
+
+                    <!-- PROVEEDORES -->
+                    <a href="#collapseProveedores" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false"
+                        aria-controls="collapseProveedores">
+                        <i class="fa-solid fa-truck me-2"></i> Proveedores
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapseProveedores">
+                        <a href="../proveedor/proveedor.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
+                            Proveedores</a>
+                        <a href="../proveedor/nuevo_proveedor.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Registrar
+                            Nuevo</a>
+                        <a href="../reporte/reportes_proveedores.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Reportes</a>
+                    </div>
+
+                    <!-- ALERTAS -->
+                    <a href="#collapseAlertas" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseAlertas">
+                        <i class="fa-solid fa-bell me-2"></i> Alertas
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapseAlertas">
+                        <a href="../alertas/alertas.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
+                            Alertas</a>
+
+                        <a href="#collapseConfigAlertas"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0"
+                            data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseConfigAlertas">
+                            Configurar Reglas
+                            <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                        </a>
+                        <div class="collapse ms-3" id="collapseConfigAlertas">
+                            <a href="../alertas/stock_umbral.html"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Umbral
+                                de
+                                Stock</a>
+                            <a href="../alertas/vencimiento_umbral.html"
+                                class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Umbral
+                                de
+                                Vencimiento</a>
+                        </div>
+
+                        <a href="../alertas/alertas_manuales.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Alertas
+                            Manuales</a>
+                    </div>
+
+                    <!-- REPORTES -->
+                    <a href="#collapseReportes" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseReportes">
+                        <i class="fa-solid fa-chart-column me-2"></i> Reportes
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapseReportes">
+                        <a href="../reporte/general.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Stock
+                            General</a>
+                        <a href="../reporte/vencidos.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Productos
+                            Vencidos</a>
+                        <a href="../reporte/movimientos.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Entradas
+                            y
+                            Salidas</a>
+                        <a href="../reporte/costos_totales.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Costos
+                            Totales</a>
+                        <a href="../reporte/enviar_reportes.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Enviar
+                            Reportes</a>
+                    </div>
+
+                    <!-- USUARIOS Y ROLES -->
+                    <a href="#collapseUsuarios" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseUsuarios">
+                        <i class="fa-solid fa-users me-2"></i> Usuarios y Roles
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapseUsuarios">
+                        <a href="../usuario/usuarios.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
+                            Usuarios</a>
+                        <a href="../usuario/nuevo_usuario.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Registrar
+                            Usuario</a>
+                        <a href="../usuario/roles_usuario.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Roles
+                            y Permisos</a>
+                        <a href="../usuario/auditoria.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Auditoría</a>
+                    </div>
+
+                    <!-- CONFIGURACIÓN -->
+                    <a href="#collapseConfig" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseConfig">
+                        <i class="bi bi-gear-fill me-2"></i> Configuración
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapseConfig">
+                        <a href="../configuracion/configuracion_sistema.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Parámetros
+                            del Sistema</a>
+                        <a href="../configuracion/respaldos.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Respaldos</a>
+                        <a href="../configuracion/interfaz.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Interfaz</a>
+                        <a href="../configuracion/notificaciones.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Notificaciones</a>
+                    </div>
+
+                </div> <!-- /list-group -->
+            </div>
+
+            <!-- PIE CON LOGO Y SLOGAN -->
+            <div class="text-center mt-auto border-top border-secondary p-3 menu-img">
+                <img src="../../assets/img/logo_prototipo.png" alt="Logo" class="img-fluid mb-2"
+                    style="max-width:80px;">
+                <p class="small text-secondary fst-italic m-0">“Control y confianza en cada registro”</p>
             </div>
         </div>
 
-        <!-- CONTENIDO PRINCIPAL -->
+        <!-- CONTENIDO -->
         <div id="page-content-wrapper">
-            <div class="container mt-4">
-                <h2 class="mb-4"><i class="fa-solid fa-pen-to-square"></i> Editar Salida</h2>
+            <main class="container-fluid p-4 my-5">
 
-                <div class="card shadow">
-                    <div class="card-body">
-                        <form>
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label class="form-label">ID Salida</label>
-                                    <input type="text" class="form-control" readonly value="00123" />
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Fecha</label>
-                                    <input type="date" class="form-control" value="2025-01-01" />
-                                </div>
-                            </div>
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="fw-bold mb-0"><i class="fa-solid fa-arrow-down text-warning fs-1 me-3"></i>Detalle de
+                        Salida
+                    </h2>
+                    <span class="text-muted small">Registro #SAL-2025-0231</span>
+                </div>
 
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label class="form-label">Producto</label>
-                                    <input type="text" class="form-control" value="Producto X" />
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Cantidad</label>
-                                    <input type="number" class="form-control" value="10" />
-                                </div>
-                            </div>
+                <div class="alert alert-warning d-flex align-items-center">
+                    <i class="fa-solid fa-lock me-2"></i>
+                    Contenido bloqueado. Las salidas de inventario solo pueden ser modificadas por causas
+                    extraordinarias.
+                </div>
 
-                            <div class="mb-3">
-                                <label class="form-label">Descripción</label>
-                                <textarea class="form-control" rows="3">Salida por consumo interno</textarea>
-                            </div>
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header fw-bold bg-white">
+                        Información general de la salida
+                    </div>
 
-                            <div class="mt-4 text-end">
-                                <a href="salidas.html" class="btn btn-secondary">
-                                    <i class="fa-solid fa-arrow-left"></i> Volver
-                                </a>
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa-solid fa-floppy-disk"></i> Guardar Cambios
-                                </button>
-                            </div>
-                        </form>
+                    <div class="card-body row g-3">
+
+                        <div class="col-md-4">
+                            <label class="form-label">Código</label>
+                            <input type="text" value="SAL-2025-0231" class="form-control" disabled>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Fecha de Salida</label>
+                            <input type="text" value="11/10/2025 - 3:10 PM" class="form-control" disabled>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Empleado Responsable</label>
+                            <input type="text" value="Ana Rodríguez (Vendedora)" class="form-control" disabled>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Cliente</label>
+                            <input type="text" value="Juan Pérez" class="form-control" disabled>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Tipo de salida</label>
+                            <input type="text" value="Venta directa" class="form-control" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="btn btn-sm btn-outline-secondary" href="salidas.html">Cancelar</a>
+                            <button class="btn btn-sm btn-outline-success" disabled value="guardar"
+                                id="saveButton">Guardar</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- DETALLE DE PRODUCTOS -->
+                <div class="card shadow-sm">
+                    <div class="card-header bg-white fw-bold">
+                        Productos incluidos
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Categoría</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio Unit.</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Ibuprofeno 400mg</td>
+                                    <td>Antiinflamatorios</td>
+                                    <td>60</td>
+                                    <td>$1.200</td>
+                                    <td>$72.000</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Paracetamol 500mg</td>
+                                    <td>Analgésicos</td>
+                                    <td>25</td>
+                                    <td>$550</td>
+                                    <td>$13.750</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+
+
+        </div>
+    </div>
+    <footer class="bg-dark pt-5 border-top text-white" style="border-top-color: #686767 !important;">
+        <div class="container">
+            <div class="row pb-4">
+
+                <!-- CONTACTO RAPIDO CLIENTE-DESARROLLADOR -->
+
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Contacto Rápido</h5>
+                    <p class="text-white-50 small">
+                        Suscríbete para recibir notificaciones o envíanos un mensaje corto.
+                    </p>
+                    <form action="#" class="d-grid gap-2">
+                        <input type="email" class="form-control" placeholder="Tu correo">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+
+                <!-- INFORMACION PERSONAL Y LABORAL -->
+
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Sobre Nosotros</h5>
+                    <p class="text-white-50">
+                        Somos una empresa dedicada a ofrecer soluciones digitales. Nuestro compromiso es la
+                        innovación y la calidad en el servicio.
+                    </p>
+                    <a href="#" class="text-decoration-none d-block mt-3">Leer más...</a>
+                </div>
+
+                <!-- RECURSOS Y POLITICAS -->
+
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Recursos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-white-50">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Términos de Servicio</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Trabaja con Nosotros</a></li>
+                    </ul>
+
+                    <!-- REDES SOCIALES -->
+
+                    <div class="mt-4">
+                        <h6 class="fw-bold">Síguenos:</h6>
+                        <span class="fs-5 me-3"><i class="fa-brands fa-linkedin"></i></span>
+                        <span class="fs-5 me-3"><i class="fa-brands fa-instagram"></i></span>
+                        <span class="fs-5 me-3"><i class="fa-brands fa-behance"></i></span>
+                        <span class="fs-5 me-3"><i class="fa-brands fa-square-facebook"></i></span>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- BOOTSTRAP JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- DERECHOS RESERVADOS -->
+
+            <div class="row pt-3 border-top">
+                <div class="col-12 text-center text-md-start">
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2025 Asuras Col para MedicColombia . Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../../assets/js/menu.js"></script>
 </body>
+
 </html>

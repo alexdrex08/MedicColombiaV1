@@ -43,8 +43,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html"><i
-                                    class="fa-solid fa-house me-1"></i>Inicio</a>
+                            <a class="nav-link" href="../index.html"><i class="fa-solid fa-house me-1"></i>Inicio</a>
                         </li>
 
                         <li class="nav-item">
@@ -118,9 +117,10 @@
                         <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
                     </a>
                     <div class="collapse ms-3" id="collapseInventario">
-                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
+                        <a href="../inventario/inventario.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
                             Inventario</a>
-                        <a href="#"
+                        <a href="../inventario/nuevo_producto.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Registrar
                             Producto</a>
 
@@ -131,15 +131,15 @@
                             <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
                         </a>
                         <div class="collapse ms-3" id="collapseMovimientos">
-                            <a href="#"
+                            <a href="../inventario/entradas.html"
                                 class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Entradas</a>
-                            <a href="#"
+                            <a href="../inventario/salidas.html"
                                 class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Salidas</a>
-                            <a href="#"
+                            <a href="../inventario/transferencias.html"
                                 class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ajustes</a>
                         </div>
 
-                        <a href="#"
+                        <a href="../alertas/vencimientos_alertas.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Vencimientos
                             y Alertas</a>
 
@@ -150,13 +150,34 @@
                             <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
                         </a>
                         <div class="collapse ms-3" id="collapseReportesInv">
-                            <a href="#"
+                            <a href="../reporte/reporte_stock.html"
                                 class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Stock</a>
-                            <a href="#"
+                            <a href="../reporte/reporte_vencidos.html"
                                 class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Vencidos</a>
-                            <a href="#"
+                            <a href="../reporte/reporte_movimientos.html"
                                 class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Movimientos</a>
                         </div>
+                    </div>
+
+                    <!-- PEDIDOS -->
+                    <a href="#collapsePedidos" class="list-group-item list-group-item-action bg-dark text-white p-4"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapsePedidos">
+                        <i class="fa-solid fa-boxes-stacked me-2"></i> Pedidos
+                        <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
+                    </a>
+                    <div class="collapse ms-3" id="collapsePedidos">
+                        <a href="../pedidos/listado_pedidos.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">
+                            Transferencias</a>
+                        <a href="../pedidos/nuevo_pedido.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Registrar
+                            Nuevo</a>
+                        <a href="pedido/en_camino.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">En
+                            camino</a>
+                        <a href="../pedidos/historial_entregas.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Historial
+                            de entregas</a>
                     </div>
 
                     <!-- PROVEEDORES -->
@@ -167,16 +188,13 @@
                         <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
                     </a>
                     <div class="collapse ms-3" id="collapseProveedores">
-                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
+                        <a href="../proveedor/proveedor.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
                             Proveedores</a>
-                        <a href="#"
+                        <a href="../proveedor/nuevo_proveedor.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Registrar
                             Nuevo</a>
-                        <a href="#"
-                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Historial
-                            de
-                            Entregas</a>
-                        <a href="#"
+                        <a href="../reporte/reportes_proveedores.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Reportes</a>
                     </div>
 
@@ -187,7 +205,8 @@
                         <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
                     </a>
                     <div class="collapse ms-3" id="collapseAlertas">
-                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
+                        <a href="../alertas/alertas.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
                             Alertas</a>
 
                         <a href="#collapseConfigAlertas"
@@ -197,17 +216,17 @@
                             <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
                         </a>
                         <div class="collapse ms-3" id="collapseConfigAlertas">
-                            <a href="#"
+                            <a href="../alertas/stock_umbral.html"
                                 class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Umbral
                                 de
                                 Stock</a>
-                            <a href="#"
+                            <a href="../alertas/vencimiento_umbral.html"
                                 class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Umbral
                                 de
                                 Vencimiento</a>
                         </div>
 
-                        <a href="#"
+                        <a href="../alertas/alertas_manuales.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Alertas
                             Manuales</a>
                     </div>
@@ -219,19 +238,20 @@
                         <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
                     </a>
                     <div class="collapse ms-3" id="collapseReportes">
-                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Stock
+                        <a href="../reporte/general.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Stock
                             General</a>
-                        <a href="#"
+                        <a href="../reporte/vencidos.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Productos
                             Vencidos</a>
-                        <a href="#"
+                        <a href="../reporte/movimientos.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Entradas
                             y
                             Salidas</a>
-                        <a href="#"
+                        <a href="../reporte/costos_totales.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Costos
                             Totales</a>
-                        <a href="#"
+                        <a href="../reporte/enviar_reportes.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Enviar
                             Reportes</a>
                     </div>
@@ -243,14 +263,16 @@
                         <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
                     </a>
                     <div class="collapse ms-3" id="collapseUsuarios">
-                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
+                        <a href="../usuario/usuarios.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Ver
                             Usuarios</a>
-                        <a href="#"
+                        <a href="../usuario/nuevo_usuario.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Registrar
                             Usuario</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Roles
+                        <a href="../usuario/roles_usuario.html"
+                            class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Roles
                             y Permisos</a>
-                        <a href="#"
+                        <a href="../usuario/auditoria.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Auditoría</a>
                     </div>
 
@@ -261,14 +283,14 @@
                         <i class="fa-solid fa-caret-up fa-flip-vertical float-end"></i>
                     </a>
                     <div class="collapse ms-3" id="collapseConfig">
-                        <a href="#"
+                        <a href="../configuracion/configuracion_sistema.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Parámetros
                             del Sistema</a>
-                        <a href="#"
+                        <a href="../configuracion/respaldos.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Respaldos</a>
-                        <a href="#"
+                        <a href="../configuracion/interfaz.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Interfaz</a>
-                        <a href="#"
+                        <a href="../configuracion/notificaciones.html"
                             class="list-group-item list-group-item-action bg-dark text-white p-4 border-0">Notificaciones</a>
                     </div>
 
@@ -287,7 +309,7 @@
         <div id="page-content-wrapper">
             <main class="container-fluid p-4 my-5">
 
-                
+
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <div>
                         <h2 class="fw-bold mb-0"><i class="fa-solid fa-arrow-up text-primary fs-1 me-3"></i>
@@ -300,7 +322,7 @@
                     </button>
                 </div>
 
-                
+
                 <div class="row g-4 mb-4">
                     <div class="col-md-3">
                         <div class="card shadow-sm border-0 p-3 h-100">
@@ -319,7 +341,7 @@
                     <div class="col-md-3">
                         <div class="card shadow-sm border-0 p-3 h-100">
                             <h6 class="fw-bold">Proveedor más frecuente</h6>
-                            <p class="fs-6 fw-bold text-muted">Farmalife S.A.</p>
+                            <p class="fs-6 fw-bold text-muted">Distribuciones Farma S..</p>
                         </div>
                     </div>
 
@@ -367,9 +389,9 @@
                                 <label class="form-label">Proveedor</label>
                                 <select class="form-select">
                                     <option selected>Seleccionar...</option>
-                                    <option>Farmalife S.A.</option>
-                                    <option>Laboratorio Andes</option>
-                                    <option>HealthCorp Ltda.</option>
+                                    <option>Distribuciones Farma S.A.</otion>
+                                    <option>Laboratorios Nacionales S.A</option>
+                                    <option>Salud y Vida Ltda.</option>
                                 </select>
                             </div>
 
@@ -387,7 +409,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="card shadow-sm border-0">
                     <div class="card-body">
 
@@ -412,7 +434,7 @@
                                     <td>2025-01-15</td>
                                     <td>Paracetamol 500mg</td>
                                     <td>200</td>
-                                    <td>Farmalife S.A.</td>
+                                    <td>Distribuciones Farma S.A</td>
                                     <td>J. Ramírez</td>
                                     <td><span class="badge bg-success">Compra</span></td>
                                     <td class="text-center">
@@ -420,8 +442,7 @@
                                                 class="fa-solid fa-eye"></i></a>
                                         <a href="entrada_editar.html" class="btn btn-sm btn-outline-secondary me-1"><i
                                                 class="fa-solid fa-pen"></i></a>
-                                        <a class="btn btn-sm btn-outline-danger"><i
-                                                class="fa-solid fa-trash"></i></a>
+                                        <a class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                 </tr>
 
@@ -430,7 +451,7 @@
                                     <td>2025-01-10</td>
                                     <td>Ibuprofeno 400mg</td>
                                     <td>150</td>
-                                    <td>Laboratorio Andes</td>
+                                    <td>Laboratorios Nacionales S.A</td>
                                     <td>D. Suárez</td>
                                     <td><span class="badge bg-success">Compra</span></td>
                                     <td class="text-center">
@@ -438,8 +459,7 @@
                                                 class="fa-solid fa-eye"></i></a>
                                         <a href="entrada_editar.html" class="btn btn-sm btn-outline-secondary me-1"><i
                                                 class="fa-solid fa-pen"></i></a>
-                                        <a class="btn btn-sm btn-outline-danger"><i
-                                                class="fa-solid fa-trash"></i></a>
+                                        <a class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                 </tr>
 
@@ -448,7 +468,7 @@
                                     <td>2024-12-22</td>
                                     <td>Alcohol 70% 500ml</td>
                                     <td>300</td>
-                                    <td>HealthCorp Ltda.</td>
+                                    <td>Salud y Vida Ltda.</td>
                                     <td>C. Méndez</td>
                                     <td><span class="badge bg-info text-dark">Ajuste</span></td>
                                     <td class="text-center">
@@ -456,8 +476,7 @@
                                                 class="fa-solid fa-eye"></i></a>
                                         <a href="entrada_editar.html" class="btn btn-sm btn-outline-secondary me-1"><i
                                                 class="fa-solid fa-pen"></i></a>
-                                        <a class="btn btn-sm btn-outline-danger"><i
-                                                class="fa-solid fa-trash"></i></a>
+                                        <a class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                 </tr>
 
@@ -466,7 +485,7 @@
                                     <td>2024-12-10</td>
                                     <td>Amoxicilina 500mg</td>
                                     <td>180</td>
-                                    <td>Farmalife S.A.</td>
+                                    <td>Distribuciones Farma S.A</td>
                                     <td>A. Rodríguez</td>
                                     <td><span class="badge bg-success">Compra</span></td>
                                     <td class="text-center">
@@ -474,8 +493,7 @@
                                                 class="fa-solid fa-eye"></i></a>
                                         <a href="entrada_editar.html" class="btn btn-sm btn-outline-secondary me-1"><i
                                                 class="fa-solid fa-pen"></i></a>
-                                        <a class="btn btn-sm btn-outline-danger"><i
-                                                class="fa-solid fa-trash"></i></a>
+                                        <a class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -502,72 +520,72 @@
             </main>
         </div>
     </div>
-        <footer class="bg-dark pt-5 border-top text-white" style="border-top-color: #686767 !important;">
-            <div class="container">
-                <div class="row pb-4">
+    <footer class="bg-dark pt-5 border-top text-white" style="border-top-color: #686767 !important;">
+        <div class="container">
+            <div class="row pb-4">
 
-                    <!-- CONTACTO RAPIDO CLIENTE-DESARROLLADOR -->
+                <!-- CONTACTO RAPIDO CLIENTE-DESARROLLADOR -->
 
-                    <div class="col-12 col-md-4 mb-4 mb-md-0">
-                        <h5 class="fw-bold mb-3">Contacto Rápido</h5>
-                        <p class="text-white-50 small">
-                            Suscríbete para recibir notificaciones o envíanos un mensaje corto.
-                        </p>
-                        <form action="#" class="d-grid gap-2">
-                            <input type="email" class="form-control" placeholder="Tu correo">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
-                        </form>
-                    </div>
-
-                    <!-- INFORMACION PERSONAL Y LABORAL -->
-
-                    <div class="col-12 col-md-4 mb-4 mb-md-0">
-                        <h5 class="fw-bold mb-3">Sobre Nosotros</h5>
-                        <p class="text-white-50">
-                            Somos una empresa dedicada a ofrecer soluciones digitales. Nuestro compromiso es la
-                            innovación y la calidad en el servicio.
-                        </p>
-                        <a href="#" class="text-decoration-none d-block mt-3">Leer más...</a>
-                    </div>
-
-                    <!-- RECURSOS Y POLITICAS -->
-
-                    <div class="col-12 col-md-4 mb-4 mb-md-0">
-                        <h5 class="fw-bold mb-3">Recursos</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-decoration-none text-white-50">Preguntas Frecuentes</a></li>
-                            <li><a href="#" class="text-decoration-none text-white-50">Política de Privacidad</a></li>
-                            <li><a href="#" class="text-decoration-none text-white-50">Términos de Servicio</a></li>
-                            <li><a href="#" class="text-decoration-none text-white-50">Trabaja con Nosotros</a></li>
-                        </ul>
-
-                        <!-- REDES SOCIALES -->
-
-                        <div class="mt-4">
-                            <h6 class="fw-bold">Síguenos:</h6>
-                            <span class="fs-5 me-3"><i class="fa-brands fa-linkedin"></i></span>
-                            <span class="fs-5 me-3"><i class="fa-brands fa-instagram"></i></span>
-                            <span class="fs-5 me-3"><i class="fa-brands fa-behance"></i></span>
-                            <span class="fs-5 me-3"><i class="fa-brands fa-square-facebook"></i></span>
-                        </div>
-                    </div>
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Contacto Rápido</h5>
+                    <p class="text-white-50 small">
+                        Suscríbete para recibir notificaciones o envíanos un mensaje corto.
+                    </p>
+                    <form action="#" class="d-grid gap-2">
+                        <input type="email" class="form-control" placeholder="Tu correo">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
                 </div>
 
-                <!-- DERECHOS RESERVADOS -->
+                <!-- INFORMACION PERSONAL Y LABORAL -->
 
-                <div class="row pt-3 border-top">
-                    <div class="col-12 text-center text-md-start">
-                        <p class="text-white-50 small mb-0">
-                            &copy; 2025 Asuras Col para MedicColombia . Todos los derechos reservados.
-                        </p>
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Sobre Nosotros</h5>
+                    <p class="text-white-50">
+                        Somos una empresa dedicada a ofrecer soluciones digitales. Nuestro compromiso es la
+                        innovación y la calidad en el servicio.
+                    </p>
+                    <a href="#" class="text-decoration-none d-block mt-3">Leer más...</a>
+                </div>
+
+                <!-- RECURSOS Y POLITICAS -->
+
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Recursos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-white-50">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Términos de Servicio</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Trabaja con Nosotros</a></li>
+                    </ul>
+
+                    <!-- REDES SOCIALES -->
+
+                    <div class="mt-4">
+                        <h6 class="fw-bold">Síguenos:</h6>
+                        <span class="fs-5 me-3"><i class="fa-brands fa-linkedin"></i></span>
+                        <span class="fs-5 me-3"><i class="fa-brands fa-instagram"></i></span>
+                        <span class="fs-5 me-3"><i class="fa-brands fa-behance"></i></span>
+                        <span class="fs-5 me-3"><i class="fa-brands fa-square-facebook"></i></span>
                     </div>
                 </div>
             </div>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-        <script src="../../assets/js/menu.js"></script>
+
+            <!-- DERECHOS RESERVADOS -->
+
+            <div class="row pt-3 border-top">
+                <div class="col-12 text-center text-md-start">
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2025 Asuras Col para MedicColombia . Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../../assets/js/menu.js"></script>
 </body>
 
 </html>
